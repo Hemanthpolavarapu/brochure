@@ -1,0 +1,145 @@
+.configurator-section {
+  padding: clamp(5rem, 10vw, 9rem) 0;
+  background:
+    linear-gradient(180deg, rgba(62, 37, 41, 0.76), rgba(26, 26, 26, 0.96)),
+    radial-gradient(circle at 80% 36%, rgba(160, 91, 60, 0.18), transparent 26rem);
+}
+
+.config-grid {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.74fr) minmax(0, 1.26fr);
+  gap: clamp(1.5rem, 5vw, 4rem);
+  align-items: start;
+}
+
+.config-copy {
+  position: sticky;
+  top: 2rem;
+}
+
+.config-copy .section-copy {
+  margin-top: 1.25rem;
+}
+
+.configurator {
+  display: grid;
+  grid-template-columns: minmax(270px, 0.95fr) minmax(280px, 1.05fr);
+  gap: clamp(1rem, 3vw, 2rem);
+  padding: clamp(1rem, 2.2vw, 1.4rem);
+}
+
+.config-controls {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.control-group {
+  display: grid;
+  gap: 0.72rem;
+}
+
+.control-label {
+  display: flex;
+  align-items: center;
+  gap: 0.48rem;
+  color: rgba(217, 208, 199, 0.76);
+  font-size: 0.86rem;
+  font-weight: 840;
+}
+
+.control-label strong {
+  margin-left: auto;
+  color: var(--paper-50);
+}
+
+.segmented-control {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem;
+}
+
+.segmented-control .control-button {
+  min-width: 0;
+  justify-content: flex-start;
+  line-height: 1.15;
+}
+
+.quantity-range {
+  width: 100%;
+  accent-color: var(--clay);
+}
+
+.config-preview {
+  position: relative;
+  display: grid;
+  min-height: 620px;
+  align-items: center;
+  padding: clamp(1rem, 3vw, 2rem);
+  overflow: hidden;
+  border: 1px solid rgba(217, 208, 199, 0.12);
+  border-radius: 8px;
+  background:
+    radial-gradient(circle at 50% 35%, rgba(217, 208, 199, 0.1), transparent 16rem),
+    rgba(217, 208, 199, 0.035);
+}
+
+.config-preview .brochure-mockup {
+  width: min(100%, 380px);
+  justify-self: center;
+}
+
+.estimate-panel {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  left: 1rem;
+  display: grid;
+  gap: 0.42rem;
+  padding: 1rem;
+  border: 1px solid rgba(217, 208, 199, 0.15);
+  border-radius: 6px;
+  background: rgba(217, 208, 199, 0.84);
+  color: var(--ink);
+  box-shadow: 0 24px 56px rgba(0, 0, 0, 0.24);
+}
+
+.estimate-panel span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  font-weight: 900;
+}
+
+.estimate-panel strong {
+  font-size: clamp(2.2rem, 4vw, 3.8rem);
+  line-height: 0.95;
+}
+
+.estimate-panel p {
+  margin: 0 0 0.5rem;
+  color: rgba(26, 26, 26, 0.72);
+  line-height: 1.45;
+}
+
+@media (max-width: 980px) {
+  .config-grid,
+  .configurator {
+    grid-template-columns: 1fr;
+  }
+
+  .config-copy {
+    position: relative;
+    top: auto;
+  }
+}
+
+@media (max-width: 560px) {
+  .segmented-control {
+    grid-template-columns: 1fr;
+  }
+
+  .config-preview {
+    min-height: 540px;
+  }
+}

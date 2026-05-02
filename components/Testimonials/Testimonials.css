@@ -1,0 +1,86 @@
+.testimonial-section {
+  padding: clamp(5rem, 9vw, 8rem) 0;
+  background:
+    linear-gradient(180deg, rgba(26, 26, 26, 0.97), rgba(62, 37, 41, 0.82)),
+    radial-gradient(circle at 74% 28%, rgba(104, 216, 214, 0.08), transparent 20rem);
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(320px, 1.05fr);
+  gap: clamp(1.5rem, 5vw, 4rem);
+  align-items: end;
+}
+
+.testimonial-panel {
+  position: relative;
+  min-height: 430px;
+  padding: clamp(1rem, 3vw, 1.5rem);
+}
+
+.quote-mark {
+  color: var(--clay);
+}
+
+.testimonial-panel figure {
+  display: grid;
+  min-height: 285px;
+  align-content: center;
+  margin: 0;
+}
+
+.testimonial-panel blockquote {
+  margin: 0;
+  color: var(--paper-50);
+  font-size: clamp(1.6rem, 3.6vw, 3.25rem);
+  font-weight: 820;
+  line-height: 1.02;
+}
+
+.testimonial-panel figcaption {
+  display: grid;
+  gap: 0.2rem;
+  margin-top: 1.4rem;
+}
+
+.testimonial-panel figcaption strong {
+  color: var(--paper-50);
+}
+
+.testimonial-panel figcaption span {
+  color: rgba(217, 208, 199, 0.62);
+}
+
+.testimonial-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.testimonial-dots {
+  display: flex;
+  gap: 0.38rem;
+}
+
+.testimonial-dots button {
+  width: 2.2rem;
+  height: 0.36rem;
+  border: 0;
+  border-radius: 2px;
+  background: rgba(217, 208, 199, 0.22);
+  transition:
+    width 180ms var(--ease-out),
+    background 180ms var(--ease-out);
+}
+
+.testimonial-dots button[aria-pressed="true"] {
+  width: 3.5rem;
+  background: var(--clay);
+}
+
+@media (max-width: 820px) {
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+}
