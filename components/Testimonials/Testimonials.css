@@ -1,8 +1,9 @@
 .testimonial-section {
   padding: clamp(5rem, 9vw, 8rem) 0;
   background:
-    linear-gradient(180deg, rgba(26, 26, 26, 0.97), rgba(62, 37, 41, 0.82)),
-    radial-gradient(circle at 74% 28%, rgba(104, 216, 214, 0.08), transparent 20rem);
+    radial-gradient(circle at 74% 28%, color-mix(in srgb, var(--primary) 14%, transparent), transparent 20rem),
+    radial-gradient(circle at 14% 72%, color-mix(in srgb, var(--accent) 16%, transparent), transparent 22rem),
+    var(--background);
 }
 
 .testimonial-grid {
@@ -19,7 +20,7 @@
 }
 
 .quote-mark {
-  color: var(--clay);
+  color: var(--accent);
 }
 
 .testimonial-panel figure {
@@ -31,7 +32,7 @@
 
 .testimonial-panel blockquote {
   margin: 0;
-  color: var(--paper-50);
+  color: var(--text);
   font-size: clamp(1.6rem, 3.6vw, 3.25rem);
   font-weight: 820;
   line-height: 1.02;
@@ -44,11 +45,11 @@
 }
 
 .testimonial-panel figcaption strong {
-  color: var(--paper-50);
+  color: var(--text);
 }
 
 .testimonial-panel figcaption span {
-  color: rgba(217, 208, 199, 0.62);
+  color: color-mix(in srgb, var(--text) 62%, var(--surface));
 }
 
 .testimonial-controls {
@@ -68,7 +69,7 @@
   height: 0.36rem;
   border: 0;
   border-radius: 2px;
-  background: rgba(217, 208, 199, 0.22);
+  background: color-mix(in srgb, var(--text) 22%, transparent);
   transition:
     width 180ms var(--ease-out),
     background 180ms var(--ease-out);
@@ -76,7 +77,7 @@
 
 .testimonial-dots button[aria-pressed="true"] {
   width: 3.5rem;
-  background: var(--clay);
+  background: var(--accent);
 }
 
 @media (max-width: 820px) {

@@ -39,7 +39,7 @@ export default function CTA() {
               <Send size={18} aria-hidden="true" />
             </button>
           </div>
-          <MagneticButton href="mailto:hello@brochureatelier.example?subject=Brochure%20quote">
+          <MagneticButton href="mailto:hello@brochureatelier.example?subject=Brochure%20quote" variant="accent">
             Email the studio
           </MagneticButton>
           {sent ? <p className="form-state">Brief received. The studio will reply with a proof path.</p> : null}

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { footerLinks } from "@/lib/data";
 import "./Footer.css";
 
@@ -17,12 +18,15 @@ export default function Footer() {
         <span>ship</span>
       </div>
       <div className="section-shell footer-grid">
-        <a className="brand-lockup" href="#top" aria-label="Brochure Atelier home">
-          <span className="brand-mark">BA</span>
-          <span>
-            Brochure
-            <br />
-            Atelier
+        <a className="brand-lockup" href="#top" aria-label="Brochear.com home">
+          <span className="brand-mark">
+            <Image
+              src="/logo.png"
+              alt="Brochear.com"
+              width={894}
+              height={1015}
+              className="brand-logo"
+            />
           </span>
         </a>
         <nav aria-label="Footer navigation">

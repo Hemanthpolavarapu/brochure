@@ -11,7 +11,7 @@ type BrochureMockupProps = {
 
 export default function BrochureMockup({
   fold = "tri-fold",
-  palette = ["#D9D0C7", "#A05B3C", "#2C1C1D"],
+  palette = ["var(--background)", "var(--primary)", "var(--text)"],
   finish = "Soft-touch",
   active = false
 }: BrochureMockupProps) {

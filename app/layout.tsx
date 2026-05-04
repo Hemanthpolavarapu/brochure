@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
-const title = "Brochure Atelier | Premium Brochure Printing and Advertising";
+const title = "Brochear.com | Premium Brochure Printing and Advertising";
 const description =
   "Premium brochure printing, fold engineering, paper selection, specialty finishes, and delivery for brands that need tactile advertising work.";
 
@@ -9,7 +9,11 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://brochure-atelier.example"),
   title: {
     default: title,
-    template: "%s | Brochure Atelier"
+    template: "%s | Brochear.com"
+  },
+  icons: {
+    icon: "/logo.png",
+    apple: "/logo.png"
   },
   description,
   keywords: [
@@ -23,7 +27,7 @@ export const metadata: Metadata = {
     title,
     description,
     url: "https://brochure-atelier.example",
-    siteName: "Brochure Atelier",
+    siteName: "Brochear.com",
     images: [
       {
         url: "/visuals/hero-press-sheet.png",
@@ -49,8 +53,7 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   width: "device-width",
-  initialScale: 1,
-  themeColor: "#1A1A1A"
+  initialScale: 1
 };
 
 export default function RootLayout({

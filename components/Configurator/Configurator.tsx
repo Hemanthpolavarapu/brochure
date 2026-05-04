@@ -22,7 +22,11 @@ export default function Configurator() {
     return Math.round((size.base + paper.modifier + finish.modifier) * runFactor * economy);
   }, [finish.modifier, paper.modifier, quantity, size.base]);
 
-  const previewPalette = [paper.tone, finish.id === "foil" ? "#F2C94C" : "#A05B3C", "#2C1C1D"];
+  const previewPalette = [
+    paper.tone,
+    finish.id === "foil" ? "var(--accent)" : "var(--primary)",
+    "var(--text)"
+  ];
 
   return (
     <section className="configurator-section" id="configurator">
@@ -142,7 +146,7 @@ export default function Configurator() {
               <p>
                 {size.panels} on {paper.grams}, {finish.label.toLowerCase()} finish.
               </p>
-              <MagneticButton href="#quote" variant="dark">
+              <MagneticButton href="#quote" variant="accent">
                 Request proof
               </MagneticButton>
             </div>

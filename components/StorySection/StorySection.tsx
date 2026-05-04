@@ -95,9 +95,9 @@ export default function StorySection() {
             />
             <defs>
               <linearGradient id="storyGradient" x1="66" x2="430" y1="72" y2="552">
-                <stop stopColor="#D9D0C7" />
-                <stop offset="0.48" stopColor="#A05B3C" />
-                <stop offset="1" stopColor="#68D8D6" />
+                <stop stopColor="var(--surface)" />
+                <stop offset="0.48" stopColor="var(--accent)" />
+                <stop offset="1" stopColor="var(--primary)" />
               </linearGradient>
             </defs>
           </svg>

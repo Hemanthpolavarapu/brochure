@@ -1,8 +1,9 @@
 .configurator-section {
   padding: clamp(5rem, 10vw, 9rem) 0;
   background:
-    linear-gradient(180deg, rgba(62, 37, 41, 0.76), rgba(26, 26, 26, 0.96)),
-    radial-gradient(circle at 80% 36%, rgba(160, 91, 60, 0.18), transparent 26rem);
+    radial-gradient(circle at 80% 36%, color-mix(in srgb, var(--accent) 16%, transparent), transparent 26rem),
+    radial-gradient(circle at 16% 78%, color-mix(in srgb, var(--primary) 12%, transparent), transparent 25rem),
+    var(--surface);
 }
 
 .config-grid {
@@ -42,14 +43,14 @@
   display: flex;
   align-items: center;
   gap: 0.48rem;
-  color: rgba(217, 208, 199, 0.76);
+  color: color-mix(in srgb, var(--text) 76%, var(--surface));
   font-size: 0.86rem;
   font-weight: 840;
 }
 
 .control-label strong {
   margin-left: auto;
-  color: var(--paper-50);
+  color: var(--text);
 }
 
 .segmented-control {
@@ -66,7 +67,7 @@
 
 .quantity-range {
   width: 100%;
-  accent-color: var(--clay);
+  accent-color: var(--primary);
 }
 
 .config-preview {
@@ -76,11 +77,11 @@
   align-items: center;
   padding: clamp(1rem, 3vw, 2rem);
   overflow: hidden;
-  border: 1px solid rgba(217, 208, 199, 0.12);
+  border: 1px solid color-mix(in srgb, var(--text) 12%, transparent);
   border-radius: 8px;
   background:
-    radial-gradient(circle at 50% 35%, rgba(217, 208, 199, 0.1), transparent 16rem),
-    rgba(217, 208, 199, 0.035);
+    radial-gradient(circle at 50% 35%, color-mix(in srgb, var(--accent) 12%, transparent), transparent 16rem),
+    color-mix(in srgb, var(--background) 68%, var(--surface));
 }
 
 .config-preview .brochure-mockup {
@@ -96,11 +97,11 @@
   display: grid;
   gap: 0.42rem;
   padding: 1rem;
-  border: 1px solid rgba(217, 208, 199, 0.15);
+  border: 1px solid color-mix(in srgb, var(--text) 12%, transparent);
   border-radius: 6px;
-  background: rgba(217, 208, 199, 0.84);
-  color: var(--ink);
-  box-shadow: 0 24px 56px rgba(0, 0, 0, 0.24);
+  background: var(--surface);
+  color: var(--text);
+  box-shadow: 0 24px 56px color-mix(in srgb, var(--text) 18%, transparent);
 }
 
 .estimate-panel span {
@@ -118,7 +119,7 @@
 
 .estimate-panel p {
   margin: 0 0 0.5rem;
-  color: rgba(26, 26, 26, 0.72);
+  color: color-mix(in srgb, var(--text) 72%, var(--surface));
   line-height: 1.45;
 }
 

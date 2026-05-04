@@ -1,7 +1,11 @@
 .site-footer {
   overflow: hidden;
   padding: 0 0 2rem;
-  background: var(--ink);
+  background:
+    radial-gradient(circle at 18% 0%, color-mix(in srgb, var(--accent) 22%, transparent), transparent 22rem),
+    radial-gradient(circle at 86% 12%, color-mix(in srgb, var(--primary) 14%, transparent), transparent 20rem),
+    var(--secondary);
+  color: var(--text);
 }
 
 .footer-marquee {
@@ -9,7 +13,7 @@
   gap: 2rem;
   width: max-content;
   padding: 1rem 0;
-  color: rgba(217, 208, 199, 0.15);
+  color: color-mix(in srgb, var(--text) 16%, transparent);
   font-size: clamp(4rem, 13vw, 11rem);
   font-weight: 900;
   line-height: 0.8;
@@ -23,7 +27,7 @@
   gap: 1.5rem;
   align-items: start;
   padding-top: 1.5rem;
-  border-top: 1px solid rgba(217, 208, 199, 0.12);
+  border-top: 1px solid color-mix(in srgb, var(--text) 18%, transparent);
 }
 
 .site-footer nav,
@@ -35,13 +39,13 @@
 
 .site-footer a,
 .site-footer span {
-  color: rgba(217, 208, 199, 0.68);
+  color: color-mix(in srgb, var(--text) 82%, var(--secondary));
   font-weight: 720;
   transition: color 160ms var(--ease-out);
 }
 
 .site-footer a:hover {
-  color: var(--paper-50);
+  color: var(--text);
 }
 
 @keyframes footerMarquee {

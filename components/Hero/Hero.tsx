@@ -48,12 +48,16 @@ export default function Hero() {
     <section className="hero paper-noise" id="top" onPointerMove={handlePointerMove}>
       <div className="hero-gradient" aria-hidden="true" />
       <header className="site-header section-shell">
-        <a className="brand-lockup" href="#top" aria-label="Brochure Atelier home">
-          <span className="brand-mark">BA</span>
-          <span>
-            Brochure
-            <br />
-            Atelier
+        <a className="brand-lockup" href="#top" aria-label="Brochear.com home">
+          <span className="brand-mark">
+            <Image
+              src="/logo.png"
+              alt="Brochear.com"
+              width={894}
+              height={1015}
+              priority
+              className="brand-logo"
+            />
           </span>
         </a>
         <nav className="desktop-nav" aria-label="Primary navigation">
@@ -67,7 +71,9 @@ export default function Hero() {
           <button className="icon-button mobile-menu" type="button" aria-label="Open navigation">
             <Menu size={18} aria-hidden="true" />
           </button>
-          <MagneticButton href="#quote">Start a quote</MagneticButton>
+          <MagneticButton href="#quote" variant="accent">
+            Start a quote
+          </MagneticButton>
         </div>
       </header>
 
@@ -131,7 +137,7 @@ export default function Hero() {
         >
           <div className="press-orbit" aria-hidden="true" />
           <Image
-            src="/visuals/hero-press-sheet.png?v=2"
+            src="/visuals/hero-press-sheet.png"
             alt="Layered premium brochure sheets with warm paper, terracotta, and plum ink tones"
             width={900}
             height={900}

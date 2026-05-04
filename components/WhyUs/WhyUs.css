@@ -2,8 +2,8 @@
   position: relative;
   padding: clamp(5rem, 10vw, 8rem) 0;
   background:
-    linear-gradient(180deg, rgba(26, 26, 26, 0.96), rgba(44, 28, 29, 0.88)),
-    linear-gradient(90deg, rgba(104, 216, 214, 0.06), transparent 32%, rgba(216, 92, 138, 0.06));
+    linear-gradient(90deg, color-mix(in srgb, var(--primary) 10%, transparent), transparent 32%, color-mix(in srgb, var(--accent) 12%, transparent)),
+    var(--background);
 }
 
 .why-grid {
@@ -25,7 +25,7 @@
 }
 
 .stat-card span {
-  color: var(--paper-50);
+  color: var(--text);
   font-size: clamp(2.1rem, 5vw, 4rem);
   font-weight: 900;
   line-height: 0.9;
@@ -33,7 +33,7 @@
 
 .stat-card p {
   margin: 0.7rem 0 0;
-  color: rgba(217, 208, 199, 0.68);
+  color: color-mix(in srgb, var(--text) 68%, var(--surface));
   line-height: 1.45;
 }
 
@@ -55,10 +55,8 @@
 
 .trust-card:hover {
   transform: translateY(-6px);
-  border-color: rgba(217, 208, 199, 0.28);
-  background:
-    linear-gradient(135deg, rgba(160, 91, 60, 0.14), rgba(217, 208, 199, 0.035)),
-    rgba(26, 26, 26, 0.58);
+  border-color: color-mix(in srgb, var(--primary) 32%, var(--text));
+  background: color-mix(in srgb, var(--surface) 82%, var(--accent));
 }
 
 .trust-icon {
@@ -66,22 +64,22 @@
   width: 3rem;
   height: 3rem;
   place-items: center;
-  border: 1px solid rgba(217, 208, 199, 0.16);
+  border: 1px solid color-mix(in srgb, var(--text) 16%, transparent);
   border-radius: 6px;
-  background: rgba(217, 208, 199, 0.08);
-  color: var(--paper-50);
+  background: color-mix(in srgb, var(--surface) 78%, var(--primary));
+  color: var(--text);
 }
 
 .trust-card h3 {
   margin: 1.2rem 0 0;
-  color: var(--paper-50);
+  color: var(--text);
   font-size: 1.35rem;
   line-height: 1;
 }
 
 .trust-card p {
   margin: 0.75rem 0 0;
-  color: rgba(217, 208, 199, 0.66);
+  color: color-mix(in srgb, var(--text) 66%, var(--surface));
   line-height: 1.58;
 }
 

@@ -9,7 +9,7 @@ type MagneticButtonProps = {
   href?: string;
   onClick?: () => void;
   className?: string;
-  variant?: "light" | "dark";
+  variant?: "primary" | "dark" | "accent";
   ariaLabel?: string;
 };
 
@@ -18,7 +18,7 @@ export default function MagneticButton({
   href,
   onClick,
   className = "",
-  variant = "light",
+  variant = "primary",
   ariaLabel
 }: MagneticButtonProps) {
   const reduceMotion = useReducedMotion();

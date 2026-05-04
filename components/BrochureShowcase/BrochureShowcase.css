@@ -3,8 +3,9 @@
   overflow: hidden;
   padding: clamp(5rem, 10vw, 9rem) 0;
   background:
-    linear-gradient(180deg, rgba(26, 26, 26, 0), rgba(26, 26, 26, 0.88) 18%),
-    radial-gradient(circle at 18% 18%, rgba(160, 91, 60, 0.16), transparent 30rem);
+    radial-gradient(circle at 18% 18%, color-mix(in srgb, var(--accent) 16%, transparent), transparent 30rem),
+    radial-gradient(circle at 86% 35%, color-mix(in srgb, var(--primary) 14%, transparent), transparent 26rem),
+    var(--surface);
 }
 
 .showcase-heading {
@@ -55,7 +56,7 @@
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: radial-gradient(circle at 50% 22%, rgba(217, 208, 199, 0.1), transparent 20rem);
+  background: radial-gradient(circle at 50% 22%, color-mix(in srgb, var(--primary) 12%, transparent), transparent 20rem);
   opacity: 0;
   transition: opacity 220ms var(--ease-out);
   content: "";
@@ -69,7 +70,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: rgba(217, 208, 199, 0.7);
+  color: color-mix(in srgb, var(--text) 72%, var(--surface));
 }
 
 .showcase-card .brochure-mockup {
@@ -85,14 +86,14 @@
 
 .showcase-card-copy h3 {
   margin: 0;
-  color: var(--paper-50);
+  color: var(--text);
   font-size: clamp(1.65rem, 3vw, 2.35rem);
   line-height: 0.95;
 }
 
 .showcase-card-copy p {
   margin: 0.75rem 0 0;
-  color: rgba(217, 208, 199, 0.68);
+  color: color-mix(in srgb, var(--text) 68%, var(--surface));
   line-height: 1.58;
 }
 
@@ -106,10 +107,10 @@
   justify-content: space-between;
   gap: 0.85rem;
   padding: 0.82rem;
-  border: 1px solid rgba(217, 208, 199, 0.14);
+  border: 1px solid color-mix(in srgb, var(--text) 14%, transparent);
   border-radius: 6px;
-  background: rgba(26, 26, 26, 0.78);
-  color: rgba(217, 208, 199, 0.72);
+  background: var(--secondary);
+  color: color-mix(in srgb, var(--text) 78%, var(--secondary));
   transform: translateY(calc(100% + 1rem));
   transition: transform 240ms var(--ease-soft);
 }
@@ -120,7 +121,7 @@
 }
 
 .spec-drawer strong {
-  color: var(--paper-50);
+  color: var(--text);
 }
 
 .brochure-mockup {
@@ -139,7 +140,7 @@
   width: 76%;
   height: 18%;
   border-radius: 50%;
-  background: rgba(0, 0, 0, 0.34);
+  background: color-mix(in srgb, var(--text) 24%, transparent);
   filter: blur(22px);
 }
 
@@ -162,11 +163,11 @@
   display: block;
   overflow: hidden;
   min-width: 0;
-  border-right: 1px solid rgba(44, 28, 29, 0.24);
+  border-right: 1px solid color-mix(in srgb, var(--text) 20%, transparent);
   background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.24), transparent 36%),
+    linear-gradient(145deg, color-mix(in srgb, var(--surface) 38%, transparent), transparent 36%),
     linear-gradient(180deg, var(--tone-a), var(--tone-b));
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.13);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--surface) 22%, transparent);
   transform-origin: left center;
 }
 
@@ -196,8 +197,8 @@
   height: 28%;
   border-radius: 4px;
   background:
-    linear-gradient(90deg, rgba(255, 255, 255, 0.2), transparent),
-    repeating-linear-gradient(0deg, rgba(26, 26, 26, 0.32) 0 2px, transparent 2px 9px);
+    linear-gradient(90deg, color-mix(in srgb, var(--surface) 28%, transparent), transparent),
+    repeating-linear-gradient(0deg, color-mix(in srgb, var(--text) 30%, transparent) 0 2px, transparent 2px 9px);
 }
 
 .mock-finish {
@@ -207,10 +208,10 @@
   bottom: 11%;
   max-width: 9rem;
   padding: 0.55rem 0.65rem;
-  border: 1px solid rgba(217, 208, 199, 0.16);
+  border: 1px solid color-mix(in srgb, var(--text) 18%, transparent);
   border-radius: 6px;
-  background: rgba(26, 26, 26, 0.72);
-  color: rgba(217, 208, 199, 0.86);
+  background: var(--secondary);
+  color: var(--text);
   font-size: 0.74rem;
   font-weight: 800;
 }
@@ -228,7 +229,7 @@
   position: absolute;
   inset: 0;
   border: 0;
-  background: rgba(10, 9, 9, 0.76);
+  background: color-mix(in srgb, var(--text) 72%, transparent);
   backdrop-filter: blur(14px);
 }
 
@@ -258,13 +259,13 @@
 
 .detail-copy h3 {
   margin: 1rem 0 0;
-  color: var(--paper-50);
+  color: var(--text);
   font-size: clamp(2.2rem, 5vw, 4.2rem);
   line-height: 0.9;
 }
 
 .detail-copy p {
-  color: rgba(217, 208, 199, 0.72);
+  color: color-mix(in srgb, var(--text) 72%, var(--surface));
   line-height: 1.65;
 }
 
@@ -277,13 +278,13 @@
 
 .detail-copy dl div {
   padding: 0.8rem;
-  border: 1px solid rgba(217, 208, 199, 0.12);
+  border: 1px solid color-mix(in srgb, var(--text) 12%, transparent);
   border-radius: 6px;
-  background: rgba(217, 208, 199, 0.05);
+  background: color-mix(in srgb, var(--surface) 86%, var(--background));
 }
 
 .detail-copy dt {
-  color: rgba(217, 208, 199, 0.55);
+  color: color-mix(in srgb, var(--text) 55%, var(--surface));
   font-size: 0.76rem;
   font-weight: 800;
   text-transform: uppercase;
@@ -291,7 +292,7 @@
 
 .detail-copy dd {
   margin: 0.28rem 0 0;
-  color: var(--paper-50);
+  color: var(--text);
   font-weight: 800;
 }
 
