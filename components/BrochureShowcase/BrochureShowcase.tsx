@@ -1,6 +1,6 @@
 "use client";
 
-import { AnimatePresence, motion, useMotionValue, useReducedMotion, useSpring } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { ArrowLeft, ArrowRight, Maximize2, X } from "lucide-react";
 import { useRef, useState } from "react";
 import { brochureTypes } from "@/lib/data";
@@ -11,35 +11,11 @@ import "./BrochureShowcase.css";
 type Brochure = (typeof brochureTypes)[number];
 
 function ShowcaseCard({ item, onOpen }: { item: Brochure; onOpen: (item: Brochure) => void }) {
-  const reduceMotion = useReducedMotion();
-  const rotateX = useSpring(useMotionValue(0), { stiffness: 170, damping: 18 });
-  const rotateY = useSpring(useMotionValue(0), { stiffness: 170, damping: 18 });
-
-  function handleMove(event: React.PointerEvent<HTMLButtonElement>) {
-    if (reduceMotion) {
-      return;
-    }
-
-    const rect = event.currentTarget.getBoundingClientRect();
-    const x = (event.clientX - rect.left) / rect.width - 0.5;
-    const y = (event.clientY - rect.top) / rect.height - 0.5;
-    rotateX.set(y * -10);
-    rotateY.set(x * 12);
-  }
-
-  function reset() {
-    rotateX.set(0);
-    rotateY.set(0);
-  }
-
   return (
     <motion.button
       type="button"
       className="showcase-card panel"
       onClick={() => onOpen(item)}
-      onPointerMove={handleMove}
-      onPointerLeave={reset}
-      style={{ rotateX, rotateY }}
       whileTap={{ scale: 0.985 }}
       aria-label={`Open ${item.name} details`}
     >
@@ -47,7 +23,7 @@ function ShowcaseCard({ item, onOpen }: { item: Brochure; onOpen: (item: Brochur
         <span className="tag">{item.fold}</span>
         <Maximize2 size={18} aria-hidden="true" />
       </div>
-      <BrochureMockup fold={item.id} palette={item.palette} finish={item.finish} />
+      <BrochureMockup fold={item.id} finish={item.finish} />
       <div className="showcase-card-copy">
         <h3>{item.name}</h3>
         <p>{item.tagline}</p>
@@ -123,7 +99,7 @@ export default function BrochureShowcase() {
               <button className="icon-button detail-close" type="button" onClick={() => setActive(null)} aria-label="Close detail panel">
                 <X size={18} aria-hidden="true" />
               </button>
-              <BrochureMockup fold={active.id} palette={active.palette} finish={active.finish} active />
+              <BrochureMockup fold={active.id} finish={active.finish} active />
               <div className="detail-copy">
                 <span className="eyebrow">{active.fold}</span>
                 <h3 id="brochure-detail-title">{active.name}</h3>

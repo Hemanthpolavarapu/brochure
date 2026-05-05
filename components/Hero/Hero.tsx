@@ -4,10 +4,7 @@ import Image from "next/image";
 import { ArrowDown, Menu, MousePointer2 } from "lucide-react";
 import {
   motion,
-  useMotionValue,
-  useReducedMotion,
-  useSpring,
-  useTransform
+  useReducedMotion
 } from "framer-motion";
 import { Fragment } from "react";
 import MagneticButton from "@/components/ui/MagneticButton";
@@ -29,24 +26,9 @@ const navItems = [
 
 export default function Hero() {
   const reduceMotion = useReducedMotion();
-  const pointerX = useSpring(useMotionValue(0), { stiffness: 90, damping: 20 });
-  const pointerY = useSpring(useMotionValue(0), { stiffness: 90, damping: 20 });
-  const rotateX = useTransform(pointerY, [-0.5, 0.5], [8, -8]);
-  const rotateY = useTransform(pointerX, [-0.5, 0.5], [-10, 10]);
-
-  function handlePointerMove(event: React.PointerEvent<HTMLElement>) {
-    if (reduceMotion) {
-      return;
-    }
-
-    const rect = event.currentTarget.getBoundingClientRect();
-    pointerX.set((event.clientX - rect.left) / rect.width - 0.5);
-    pointerY.set((event.clientY - rect.top) / rect.height - 0.5);
-  }
 
   return (
-    <section className="hero paper-noise" id="top" onPointerMove={handlePointerMove}>
-      <div className="hero-gradient" aria-hidden="true" />
+    <section className="hero paper-noise" id="top">
       <header className="site-header section-shell">
         <a className="brand-lockup" href="#top" aria-label="Brochear.com home">
           <span className="brand-mark">
@@ -130,20 +112,48 @@ export default function Hero() {
 
         <motion.div
           className="hero-visual"
-          style={{ rotateX, rotateY }}
           initial={reduceMotion ? false : { opacity: 0, scale: 0.92, y: 42 }}
           animate={reduceMotion ? undefined : { opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 0.72, ease: [0.16, 1, 0.3, 1], delay: 0.28 }}
         >
           <div className="press-orbit" aria-hidden="true" />
-          <Image
-            src="/visuals/hero-press-sheet.png"
-            alt="Layered premium brochure sheets with warm paper, terracotta, and plum ink tones"
-            width={900}
-            height={900}
-            priority
-            className="hero-visual-image"
-          />
+          <div className="hero-paper hero-paper-main">
+            <Image
+              src="/visuals/hero-press-sheet.png"
+              alt="Layered premium brochure sheets with warm paper, terracotta, and plum ink tones"
+              width={900}
+              height={900}
+              priority
+              className="hero-paper-image"
+            />
+          </div>
+          <div className="hero-paper hero-paper-left" aria-hidden="true">
+            <Image
+              src="/visuals/portfolio-gallery.png"
+              alt=""
+              width={640}
+              height={820}
+              className="hero-paper-image"
+            />
+          </div>
+          <div className="hero-paper hero-paper-right" aria-hidden="true">
+            <Image
+              src="/visuals/portfolio-startup.png"
+              alt=""
+              width={640}
+              height={820}
+              className="hero-paper-image"
+            />
+          </div>
+          <div className="hero-paper hero-paper-low" aria-hidden="true">
+            <Image
+              src="/visuals/portfolio-menu.png"
+              alt=""
+              width={640}
+              height={820}
+              className="hero-paper-image"
+            />
+          </div>
           <div className="floating-proof panel">
             <span>Proof accuracy</span>
             <strong>98%</strong>

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Calculator, Layers3, Palette, Ruler, SlidersHorizontal } from "lucide-react";
+import { Calculator, FileText, Layers3, Ruler, SlidersHorizontal } from "lucide-react";
 import { useMemo, useState } from "react";
 import BrochureMockup from "@/components/ui/BrochureMockup";
 import MagneticButton from "@/components/ui/MagneticButton";
@@ -22,12 +22,6 @@ export default function Configurator() {
     return Math.round((size.base + paper.modifier + finish.modifier) * runFactor * economy);
   }, [finish.modifier, paper.modifier, quantity, size.base]);
 
-  const previewPalette = [
-    paper.tone,
-    finish.id === "foil" ? "var(--accent)" : "var(--primary)",
-    "var(--text)"
-  ];
-
   return (
     <section className="configurator-section" id="configurator">
       <div className="section-shell config-grid">
@@ -44,7 +38,7 @@ export default function Configurator() {
           <div className="config-controls">
             <div className="control-group">
               <div className="control-label">
-                <Palette size={17} aria-hidden="true" />
+                <FileText size={17} aria-hidden="true" />
                 <span>Paper</span>
               </div>
               <div className="segmented-control">
@@ -133,7 +127,6 @@ export default function Configurator() {
           >
             <BrochureMockup
               fold={size.id.includes("gate") ? "gate-fold" : size.id.includes("bifold") ? "bi-fold" : "tri-fold"}
-              palette={previewPalette}
               finish={`${paper.grams} / ${finish.label}`}
               active
             />

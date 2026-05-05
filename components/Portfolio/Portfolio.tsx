@@ -50,14 +50,13 @@ export default function Portfolio() {
         <AnimatePresence mode="popLayout">
           {visible.map((item) => (
             <motion.button
-              layout
               type="button"
               className={`portfolio-tile portfolio-${item.height}`}
               key={item.id}
               onClick={() => setActive(item)}
-              initial={{ opacity: 0, y: 26 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.96 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
               transition={{ duration: 0.38, ease: [0.22, 1, 0.36, 1] }}
               aria-label={`Open ${item.title} portfolio preview`}
             >

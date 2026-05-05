@@ -140,3 +140,6 @@ Save-Portfolio "portfolio-gallery.png" "Gallery`nMap" $palette.Magenta $palette.
 Save-Portfolio "portfolio-hotel.png" "Hotel`nCompendium" $palette.Yellow $palette.Umber $palette.Dark 4
 Save-Portfolio "portfolio-startup.png" "Investor`nFoldout" $palette.Clay $palette.Paper $palette.Plum 5
 Save-Portfolio "portfolio-menu.png" "Seasonal`nMenu" $palette.Rose $palette.Paper $palette.Umber 6
+Save-Portfolio "portfolio-civic.png" "Civic`nWelcome" $palette.Taupe $palette.Paper $palette.Dark 7
+Save-Portfolio "portfolio-wellness.png" "Wellness`nGuide" $palette.Cyan $palette.Paper $palette.Plum 8
+Save-Portfolio "portfolio-retail.png" "Retail`nMailer" $palette.Magenta $palette.Taupe $palette.Wine 9

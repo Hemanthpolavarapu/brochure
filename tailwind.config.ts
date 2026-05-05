@@ -8,17 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      colors: {
-        primary: "var(--primary)",
-        secondary: "var(--secondary)",
-        background: "var(--background)",
-        surface: "var(--surface)",
-        accent: "var(--accent)",
-        text: "var(--text)"
-      },
       boxShadow: {
-        lift: "0 24px 80px color-mix(in srgb, var(--background) 72%, transparent)",
-        glow: "0 0 40px color-mix(in srgb, var(--accent) 28%, transparent)"
+        lift: "0 24px 80px rgba(0, 0, 0, 0.08)",
+        glow: "0 18px 42px rgba(0, 0, 0, 0.1)"
       },
       borderRadius: {
         panel: "8px",

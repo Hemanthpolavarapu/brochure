@@ -1,7 +1,6 @@
 import BrochureShowcase from "@/components/BrochureShowcase/BrochureShowcase";
 import Configurator from "@/components/Configurator/Configurator";
 import CTA from "@/components/CTA/CTA";
-import DebugPaletteSwitcher from "@/components/DebugPaletteSwitcher/DebugPaletteSwitcher";
 import Footer from "@/components/Footer/Footer";
 import Hero from "@/components/Hero/Hero";
 import Portfolio from "@/components/Portfolio/Portfolio";
@@ -70,7 +69,6 @@ export default function Home() {
         <CTA />
       </main>
       <Footer />
-      <DebugPaletteSwitcher />
     </>
   );
 }

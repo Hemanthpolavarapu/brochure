@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { Send } from "lucide-react";
 import { FormEvent, useState } from "react";
 import MagneticButton from "@/components/ui/MagneticButton";
@@ -17,12 +16,6 @@ export default function CTA() {
   return (
     <section className="cta-section" id="quote">
       <div className="section-shell cta-panel">
-        <motion.div
-          className="cta-background"
-          aria-hidden="true"
-          animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
-          transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-        />
         <div className="cta-copy">
           <span className="eyebrow">Press-ready next step</span>
           <h2>Bring the campaign into people&apos;s hands.</h2>

@@ -89,17 +89,10 @@ export default function StorySection() {
             <path
               className="story-line-path"
               d="M84 68 C 360 86, 102 190, 306 250 S 410 424, 122 474 C 76 486, 104 548, 420 554"
-              stroke="url(#storyGradient)"
+              stroke="#808080"
               strokeWidth="6"
               strokeLinecap="round"
             />
-            <defs>
-              <linearGradient id="storyGradient" x1="66" x2="430" y1="72" y2="552">
-                <stop stopColor="var(--surface)" />
-                <stop offset="0.48" stopColor="var(--accent)" />
-                <stop offset="1" stopColor="var(--primary)" />
-              </linearGradient>
-            </defs>
           </svg>
           <div className="press-stage">
             <span />

@@ -18,7 +18,6 @@ export const brochureTypes = [
     paper: "300gsm velvet matte",
     finish: "Soft-touch with spot UV",
     price: "From $220",
-    palette: ["var(--background)", "var(--primary)", "var(--text)"],
     specs: ["4 panels", "A4 or letter", "48h digital proof", "250+ units"],
     leadTime: "4-6 business days"
   },
@@ -30,7 +29,6 @@ export const brochureTypes = [
     paper: "250gsm silk coated",
     finish: "Aqueous seal",
     price: "From $186",
-    palette: ["var(--surface)", "var(--secondary)", "var(--text)"],
     specs: ["6 panels", "Roll or accordion", "CMYK rich black", "500+ units"],
     leadTime: "3-5 business days"
   },
@@ -42,7 +40,6 @@ export const brochureTypes = [
     paper: "270gsm natural uncoated",
     finish: "Edge tint optional",
     price: "From $260",
-    palette: ["var(--background)", "var(--accent)", "var(--primary)"],
     specs: ["6 panels", "Map-grade creasing", "Low-glare finish", "250+ units"],
     leadTime: "5-7 business days"
   },
@@ -54,7 +51,6 @@ export const brochureTypes = [
     paper: "350gsm cover stock",
     finish: "Foil stamp and deboss",
     price: "From $420",
-    palette: ["var(--surface)", "var(--secondary)", "var(--accent)"],
     specs: ["8 panels", "Center reveal", "Foil-ready dies", "150+ units"],
     leadTime: "7-10 business days"
   }
@@ -89,9 +85,9 @@ export const storySteps = [
 ];
 
 export const paperOptions = [
-  { id: "silk", label: "Silk Coated", grams: "250gsm", modifier: 0, tone: "var(--surface)" },
-  { id: "velvet", label: "Velvet Matte", grams: "300gsm", modifier: 42, tone: "var(--background)" },
-  { id: "natural", label: "Natural Uncoated", grams: "270gsm", modifier: 28, tone: "var(--accent)" }
+  { id: "silk", label: "Silk Coated", grams: "250gsm", modifier: 0 },
+  { id: "velvet", label: "Velvet Matte", grams: "300gsm", modifier: 42 },
+  { id: "natural", label: "Natural Uncoated", grams: "270gsm", modifier: 28 }
 ];
 
 export const finishOptions = [
@@ -184,6 +180,30 @@ export const portfolioItems = [
     category: "Food and Beverage",
     finish: "Uncoated, blind deboss",
     image: "/visuals/portfolio-menu.png",
+    height: "short"
+  },
+  {
+    id: "civic",
+    title: "Civic Welcome Foldout",
+    category: "Culture",
+    finish: "Natural stock, map crease",
+    image: "/visuals/portfolio-civic.png",
+    height: "medium"
+  },
+  {
+    id: "wellness",
+    title: "Wellness Program Guide",
+    category: "Healthcare",
+    finish: "Silk stock, spot UV",
+    image: "/visuals/portfolio-wellness.png",
+    height: "tall"
+  },
+  {
+    id: "retail",
+    title: "Retail Launch Mailer",
+    category: "Retail",
+    finish: "Soft-touch, high-gloss seal",
+    image: "/visuals/portfolio-retail.png",
     height: "short"
   }
 ];

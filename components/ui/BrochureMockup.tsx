@@ -1,17 +1,13 @@
 "use client";
 
-import { motion } from "framer-motion";
-
 type BrochureMockupProps = {
   fold?: "bi-fold" | "tri-fold" | "z-fold" | "gate-fold" | string;
-  palette?: string[];
   finish?: string;
   active?: boolean;
 };
 
 export default function BrochureMockup({
   fold = "tri-fold",
-  palette = ["var(--background)", "var(--primary)", "var(--text)"],
   finish = "Soft-touch",
   active = false
 }: BrochureMockupProps) {
@@ -19,49 +15,24 @@ export default function BrochureMockup({
   const panels = Array.from({ length: panelCount });
 
   return (
-    <motion.div
+    <div
       className="brochure-mockup"
       data-fold={fold}
       data-active={active}
-      animate={{ rotate: active ? -1.5 : 0 }}
-      transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-      style={
-        {
-          "--tone-a": palette[0],
-          "--tone-b": palette[1],
-          "--tone-c": palette[2]
-        } as React.CSSProperties
-      }
     >
       <div className="mock-shadow" />
       <div className="mock-sheet">
         {panels.map((_, index) => (
-          <motion.span
+          <span
             key={index}
             className="mock-panel"
-            initial={false}
-            animate={{
-              rotateY:
-                active && fold === "gate-fold"
-                  ? index < 2
-                    ? -8 + index * 3
-                    : 8 - index
-                  : active && fold === "z-fold"
-                    ? index % 2 === 0
-                      ? -5
-                      : 6
-                    : active
-                      ? index * 2 - 2
-                      : 0
-            }}
-            transition={{ duration: 0.46, ease: [0.22, 1, 0.36, 1] }}
           >
             <i />
             <b />
-          </motion.span>
+          </span>
         ))}
       </div>
       <div className="mock-finish">{finish}</div>
-    </motion.div>
+    </div>
   );
 }

@@ -1,8 +1,6 @@
 .cta-section {
   padding: clamp(4rem, 8vw, 7rem) 0;
-  background:
-    radial-gradient(circle at 18% 40%, color-mix(in srgb, var(--accent) 18%, transparent), transparent 22rem),
-    var(--surface);
+  background: #FFFFFF;
 }
 
 .cta-panel {
@@ -14,33 +12,17 @@
   min-height: 440px;
   overflow: hidden;
   padding: clamp(1.2rem, 5vw, 4rem);
-  border: 1px solid color-mix(in srgb, var(--text) 14%, transparent);
+  border: 1px solid #E6E6E6;
   border-radius: 8px;
-  background: var(--surface);
+  background: #FFFFFF;
   isolation: isolate;
-  box-shadow: 0 24px 80px color-mix(in srgb, var(--text) 16%, transparent);
-}
-
-.cta-background {
-  position: absolute;
-  inset: -1px;
-  z-index: -1;
-  background:
-    linear-gradient(
-      120deg,
-      color-mix(in srgb, var(--accent) 58%, var(--surface)),
-      color-mix(in srgb, var(--primary) 28%, var(--surface)),
-      color-mix(in srgb, var(--secondary) 22%, var(--surface)),
-      var(--surface)
-    ),
-    radial-gradient(circle at 20% 80%, color-mix(in srgb, var(--accent) 18%, transparent), transparent 24rem);
-  background-size: 220% 220%;
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.08);
 }
 
 .cta-copy h2 {
   max-width: 850px;
   margin: 1rem 0 0;
-  color: var(--text);
+  color: #606060;
   font-size: clamp(3.2rem, 10vw, 8rem);
   font-weight: 900;
   line-height: 0.84;
@@ -48,7 +30,7 @@
 
 .cta-copy p {
   max-width: 620px;
-  color: color-mix(in srgb, var(--text) 76%, var(--surface));
+  color: #808080;
   font-size: 1.08rem;
   line-height: 1.65;
 }
@@ -57,14 +39,14 @@
   display: grid;
   gap: 0.85rem;
   padding: 1rem;
-  border: 1px solid color-mix(in srgb, var(--text) 14%, transparent);
+  border: 1px solid #E6E6E6;
   border-radius: 8px;
-  background: var(--surface);
-  box-shadow: 0 18px 50px color-mix(in srgb, var(--text) 12%, transparent);
+  background: #FFFFFF;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.08);
 }
 
 .quote-form label {
-  color: color-mix(in srgb, var(--text) 72%, var(--surface));
+  color: #808080;
   font-size: 0.86rem;
   font-weight: 850;
 }
@@ -78,22 +60,26 @@
 .email-row input {
   min-width: 0;
   min-height: 2.8rem;
-  border: 1px solid color-mix(in srgb, var(--text) 16%, transparent);
+  border: 1px solid #DADADA;
   border-radius: 6px;
-  background: color-mix(in srgb, var(--surface) 84%, var(--background));
-  color: var(--text);
+  background: #FFFFFF;
+  color: #606060;
   padding: 0.74rem 0.85rem;
   outline: none;
 }
 
+.email-row input::placeholder {
+  color: #808080;
+}
+
 .email-row input:focus-visible {
-  border-color: color-mix(in srgb, var(--primary) 58%, var(--text));
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary) 24%, transparent);
+  border-color: #606060;
+  box-shadow: 0 0 0 3px rgba(96, 96, 96, 0.12);
 }
 
 .form-state {
   margin: 0;
-  color: color-mix(in srgb, var(--text) 76%, var(--surface));
+  color: #808080;
   line-height: 1.45;
 }
 
