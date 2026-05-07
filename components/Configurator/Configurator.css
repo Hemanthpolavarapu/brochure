@@ -19,6 +19,26 @@
   margin-top: 1.25rem;
 }
 
+.about-points {
+  display: grid;
+  gap: 0.65rem;
+  margin-top: 1.45rem;
+}
+
+.about-points span {
+  display: inline-flex;
+  width: fit-content;
+  max-width: 100%;
+  padding: 0.72rem 0.82rem;
+  border: 1px solid #E6E6E6;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #606060;
+  font-size: 0.9rem;
+  font-weight: 820;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
+}
+
 .configurator {
   display: grid;
   grid-template-columns: minmax(270px, 0.95fr) minmax(280px, 1.05fr);

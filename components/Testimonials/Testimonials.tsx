@@ -27,8 +27,8 @@ export default function Testimonials() {
     <section className="testimonial-section" aria-label="Client testimonials">
       <div className="section-shell testimonial-grid">
         <Reveal>
-          <span className="eyebrow">Client signal</span>
-          <h2 className="section-heading text-balance">The handoff feels calm because the details are already handled.</h2>
+          <span className="eyebrow">Client testimonials</span>
+          <h2 className="section-heading text-balance">Trusted by teams that need print to look sharp and arrive on time.</h2>
         </Reveal>
         <Reveal className="testimonial-panel panel" delay={0.08}>
           <Quote className="quote-mark" size={40} aria-hidden="true" />

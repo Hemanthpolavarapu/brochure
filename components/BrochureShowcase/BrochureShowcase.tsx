@@ -1,9 +1,9 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowLeft, ArrowRight, Maximize2, X } from "lucide-react";
+import { ArrowLeft, ArrowRight, CheckCircle2, Maximize2, X } from "lucide-react";
 import { useRef, useState } from "react";
-import { brochureTypes } from "@/lib/data";
+import { brochureTypes, serviceCards } from "@/lib/data";
 import BrochureMockup from "@/components/ui/BrochureMockup";
 import Reveal from "@/components/ui/Reveal";
 import "./BrochureShowcase.css";
@@ -48,21 +48,38 @@ export default function BrochureShowcase() {
   }
 
   return (
-    <section className="showcase-section" id="brochures">
+    <section className="showcase-section" id="services">
       <div className="section-shell showcase-heading">
         <Reveal>
-          <span className="eyebrow">Brochure systems</span>
-          <h2 className="section-heading text-balance">Formats with a built-in opening moment.</h2>
+          <span className="eyebrow">Printing services</span>
+          <h2 className="section-heading text-balance">Commercial print materials made to look expensive.</h2>
         </Reveal>
         <Reveal delay={0.08}>
           <p className="section-copy">
-            Every fold is treated like an interface. Hover a format to surface production logic,
-            then open a detail view for paper, finish, price, and lead-time signals.
+            From high-volume offset runs to fast digital projects, Brochear gives every printed
+            piece the same premium discipline: sharp files, refined paper, clean finishing, and
+            confident delivery.
           </p>
         </Reveal>
       </div>
 
-      <div className="showcase-controls section-shell" aria-label="Brochure carousel controls">
+      <div className="section-shell service-card-grid">
+        {serviceCards.map(({ Icon, title, copy }, index) => (
+          <Reveal className="service-card panel" delay={index * 0.035} key={title}>
+            <div className="service-icon">
+              <Icon size={22} aria-hidden="true" />
+            </div>
+            <h3>{title}</h3>
+            <p>{copy}</p>
+            <span>
+              <CheckCircle2 size={16} aria-hidden="true" />
+              Print-ready guidance
+            </span>
+          </Reveal>
+        ))}
+      </div>
+
+      <div className="showcase-controls section-shell" aria-label="Featured print carousel controls">
         <button className="icon-button" type="button" onClick={() => scrollByCard(-1)} aria-label="Previous brochure">
           <ArrowLeft size={18} aria-hidden="true" />
         </button>
@@ -71,7 +88,7 @@ export default function BrochureShowcase() {
         </button>
       </div>
 
-      <div className="showcase-rail hide-scrollbar" ref={railRef} aria-label="Brochure product showcase">
+      <div className="showcase-rail hide-scrollbar" ref={railRef} aria-label="Featured print format showcase">
         {brochureTypes.map((item) => (
           <ShowcaseCard item={item} key={item.id} onOpen={setActive} />
         ))}

@@ -36,8 +36,8 @@ export default function WhyUs() {
     <section className="why-section">
       <div className="section-shell why-grid">
         <Reveal>
-          <span className="eyebrow">Why brands stay</span>
-          <h2 className="section-heading text-balance">Premium print is a system, not a lucky press run.</h2>
+          <span className="eyebrow">Why choose us</span>
+          <h2 className="section-heading text-balance">Premium print quality with business-grade reliability.</h2>
         </Reveal>
         <div className="stats-grid" aria-label="Company proof points">
           {trustStats.map((stat) => (

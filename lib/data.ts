@@ -1,93 +1,163 @@
 import {
   BadgeCheck,
+  BookOpen,
+  BriefcaseBusiness,
+  Building2,
   Boxes,
+  Brush,
   Clock3,
+  CreditCard,
+  FileStack,
+  GraduationCap,
+  Handshake,
+  HeartPulse,
+  Hotel,
+  Landmark,
   Layers3,
+  Megaphone,
+  Palette,
   Printer,
+  ReceiptText,
+  ScanLine,
   ShieldCheck,
   Sparkles,
-  Truck
+  Store,
+  Truck,
+  WandSparkles
 } from "lucide-react";
 
 export const brochureTypes = [
   {
     id: "bi-fold",
-    name: "Bi-fold Launch",
-    tagline: "A clean four-panel reveal for product launches and local campaigns.",
-    fold: "Bi-fold",
-    paper: "300gsm velvet matte",
-    finish: "Soft-touch with spot UV",
-    price: "From $220",
-    specs: ["4 panels", "A4 or letter", "48h digital proof", "250+ units"],
-    leadTime: "4-6 business days"
+    name: "Brochure Printing",
+    tagline: "Premium folded brochures with crisp color, confident paper, and layouts built to sell.",
+    fold: "Marketing print",
+    paper: "250-350gsm coated and matte stocks",
+    finish: "Soft-touch, UV, foil, lamination",
+    price: "Quote by run",
+    specs: ["Bi-fold", "Tri-fold", "Z-fold", "Gate-fold"],
+    leadTime: "3-7 business days"
   },
   {
     id: "tri-fold",
-    name: "Tri-fold Sales Kit",
-    tagline: "Six sharp panels for service menus, sales journeys, and event handouts.",
-    fold: "Tri-fold",
-    paper: "250gsm silk coated",
-    finish: "Aqueous seal",
-    price: "From $186",
-    specs: ["6 panels", "Roll or accordion", "CMYK rich black", "500+ units"],
-    leadTime: "3-5 business days"
+    name: "Catalog Printing",
+    tagline: "Polished product catalogs that make every page feel intentional, sharp, and premium.",
+    fold: "Multi-page print",
+    paper: "Art paper, silk, matte, uncoated",
+    finish: "Saddle stitch, perfect bind, UV",
+    price: "Quote by pages",
+    specs: ["Product catalogs", "Lookbooks", "Manuals", "Sales books"],
+    leadTime: "5-10 business days"
   },
   {
     id: "z-fold",
-    name: "Z-fold Storyline",
-    tagline: "A kinetic unfold for maps, property launches, and guided brand stories.",
-    fold: "Z-fold",
-    paper: "270gsm natural uncoated",
-    finish: "Edge tint optional",
-    price: "From $260",
-    specs: ["6 panels", "Map-grade creasing", "Low-glare finish", "250+ units"],
-    leadTime: "5-7 business days"
+    name: "Corporate Print Kits",
+    tagline: "Business cards, folders, letterheads, profiles, and sales collateral aligned as one brand system.",
+    fold: "Brand essentials",
+    paper: "Premium card and writing stocks",
+    finish: "Embossing, spot UV, foil, matte",
+    price: "Quote by kit",
+    specs: ["Cards", "Folders", "Profiles", "Stationery"],
+    leadTime: "4-8 business days"
   },
   {
     id: "gate-fold",
-    name: "Gate-fold Signature",
-    tagline: "A dramatic opening moment for luxury real estate and premium offers.",
-    fold: "Gate-fold",
-    paper: "350gsm cover stock",
-    finish: "Foil stamp and deboss",
-    price: "From $420",
-    specs: ["8 panels", "Center reveal", "Foil-ready dies", "150+ units"],
-    leadTime: "7-10 business days"
+    name: "Digital and Offset Printing",
+    tagline: "Fast digital runs and high-volume offset production managed with the same quality discipline.",
+    fold: "Production",
+    paper: "Flexible stocks for short and bulk runs",
+    finish: "Color calibration, trimming, binding",
+    price: "Quote by quantity",
+    specs: ["Short runs", "Bulk runs", "CMYK control", "Preflight"],
+    leadTime: "2-10 business days"
+  }
+];
+
+export const serviceCards = [
+  {
+    title: "Brochure Printing",
+    copy: "Elegant folded brochures for launches, sales teams, events, and premium brand storytelling.",
+    Icon: BookOpen
+  },
+  {
+    title: "Flyer Printing",
+    copy: "High-impact flyers with clean hierarchy, bold color, and fast campaign turnaround.",
+    Icon: Megaphone
+  },
+  {
+    title: "Catalog Printing",
+    copy: "Product catalogs, lookbooks, and company profiles finished for serious presentation.",
+    Icon: FileStack
+  },
+  {
+    title: "Business Card Printing",
+    copy: "Sharp cards with premium stock, refined finishes, and details people remember.",
+    Icon: CreditCard
+  },
+  {
+    title: "Corporate Printing",
+    copy: "Profiles, folders, letterheads, reports, and internal brand materials in one system.",
+    Icon: BriefcaseBusiness
+  },
+  {
+    title: "Offset Printing",
+    copy: "Consistent, economical, high-volume production for demanding commercial print runs.",
+    Icon: Printer
+  },
+  {
+    title: "Digital Printing",
+    copy: "Fast, flexible, precise short-run printing when timelines move quickly.",
+    Icon: ScanLine
+  },
+  {
+    title: "Poster Printing",
+    copy: "Large-format posters with cinematic contrast, crisp edges, and showroom presence.",
+    Icon: ReceiptText
+  },
+  {
+    title: "Booklet Printing",
+    copy: "Premium stitched, bound, and trimmed booklets for portfolios, guides, and proposals.",
+    Icon: Layers3
+  },
+  {
+    title: "Branding Materials",
+    copy: "Launch-ready marketing print materials that keep every brand touchpoint consistent.",
+    Icon: Palette
   }
 ];
 
 export const storySteps = [
   {
-    label: "Idea",
-    title: "Campaign intent becomes a print architecture.",
-    copy: "We map the audience, message sequence, panel pacing, and response path before design starts."
+    label: "Brief",
+    title: "Your print goal becomes a clear production plan.",
+    copy: "We align format, audience, quantity, budget, timeline, paper feel, and finish expectations before files move forward."
   },
   {
-    label: "Design",
-    title: "Layouts are built around the fold, not trapped by it.",
-    copy: "Typography, image rhythm, and conversion moments are tuned to the way the brochure opens in hand."
+    label: "Artwork",
+    title: "Creative files are refined for real-world print.",
+    copy: "Layouts are checked for bleed, resolution, typography, color mode, hierarchy, and finish placement."
   },
   {
     label: "Proof",
-    title: "Color, stock, and finish are validated before press.",
-    copy: "Digital proofing catches hierarchy, trim, bleed, paper feel, and finish placement early."
+    title: "Color and specifications are approved before production.",
+    copy: "Digital and physical proofing help protect color accuracy, trim confidence, stock choice, and final presentation."
   },
   {
     label: "Print",
-    title: "Press checks protect the tactile premium.",
-    copy: "CMYK calibration, creasing pressure, varnish alignment, and finishing passes are controlled as one system."
+    title: "Press teams produce with disciplined quality control.",
+    copy: "Digital or offset production is monitored for color consistency, registration, ink density, and finishing precision."
   },
   {
-    label: "Delivery",
-    title: "Packed, counted, and staged for campaign launch.",
-    copy: "Finished work ships with practical boxing, batch labels, and schedule visibility."
+    label: "Finish",
+    title: "Every piece is trimmed, packed, and ready to impress.",
+    copy: "Binding, lamination, foil, UV, folding, packing, and dispatch are handled with clean handoff visibility."
   }
 ];
 
 export const paperOptions = [
-  { id: "silk", label: "Silk Coated", grams: "250gsm", modifier: 0 },
-  { id: "velvet", label: "Velvet Matte", grams: "300gsm", modifier: 42 },
-  { id: "natural", label: "Natural Uncoated", grams: "270gsm", modifier: 28 }
+  { id: "silk", label: "Silk Coated", grams: "170-250gsm", modifier: 0 },
+  { id: "velvet", label: "Velvet Matte", grams: "250-350gsm", modifier: 42 },
+  { id: "natural", label: "Natural Uncoated", grams: "120-270gsm", modifier: 28 }
 ];
 
 export const finishOptions = [
@@ -98,111 +168,121 @@ export const finishOptions = [
 ];
 
 export const sizeOptions = [
-  { id: "letter-trifold", label: "Letter Tri-fold", panels: "6 panels", base: 186 },
-  { id: "a4-bifold", label: "A4 Bi-fold", panels: "4 panels", base: 220 },
-  { id: "square-gate", label: "Square Gate-fold", panels: "8 panels", base: 346 }
+  { id: "letter-trifold", label: "Marketing Flyer", panels: "single or folded sheet", base: 186 },
+  { id: "a4-bifold", label: "Corporate Brochure", panels: "4-6 panel collateral", base: 220 },
+  { id: "square-gate", label: "Catalog / Booklet", panels: "multi-page printed piece", base: 346 }
 ];
 
 export const trustStats = [
-  { label: "brochures printed", value: 1280000, suffix: "+" },
-  { label: "active brand clients", value: 420, suffix: "+" },
-  { label: "color proofs approved", value: 98, suffix: "%" },
-  { label: "years on press", value: 14, suffix: "" }
+  { label: "commercial pieces printed", value: 1280000, suffix: "+" },
+  { label: "business clients served", value: 420, suffix: "+" },
+  { label: "proof approval accuracy", value: 98, suffix: "%" },
+  { label: "years of print craft", value: 14, suffix: "+" }
 ];
 
 export const trustCards = [
   {
-    title: "Print engineering",
-    copy: "Fold tolerances, paper grain, and finish registration are specified before the art goes to press.",
+    title: "Premium Print Quality",
+    copy: "Sharp color, clean trim, refined stocks, and finish control give every piece a high-end commercial feel.",
     Icon: Printer
   },
   {
-    title: "Campaign reliability",
-    copy: "Proofs, batch labels, and delivery windows are managed like a launch plan, not a loose print order.",
+    title: "Fast Delivery",
+    copy: "Production schedules are built around real launch dates, with quick proofs and reliable dispatch windows.",
     Icon: Clock3
   },
   {
-    title: "Premium finishes",
-    copy: "Foil, spot UV, soft-touch, debossing, and edge tints are paired with the right stock.",
-    Icon: Sparkles
+    title: "Modern Printing Technology",
+    copy: "Digital and offset workflows support short runs, bulk production, accurate color, and flexible finishing.",
+    Icon: BadgeCheck
   },
   {
-    title: "Brand protection",
-    copy: "Color targets, typography checks, and preflight QA keep every run consistent.",
+    title: "Creative Design Support",
+    copy: "From file cleanup to layout guidance, the studio helps your brand look intentional in print.",
+    Icon: WandSparkles
+  },
+  {
+    title: "Reliable Service",
+    copy: "Clear proofs, practical recommendations, and consistent communication keep every print order moving.",
     Icon: ShieldCheck
+  },
+  {
+    title: "Affordable Solutions",
+    copy: "Smart material choices and production planning help you get premium results without waste.",
+    Icon: Sparkles
   }
 ];
 
 export const portfolioItems = [
   {
     id: "estate",
-    title: "Estate Launch Booklet",
-    category: "Real Estate",
-    finish: "Velvet matte, bronze foil",
+    title: "Luxury Property Brochure",
+    category: "Brochures",
+    finish: "Velvet matte stock, foil detail, precision folds",
     image: "/visuals/portfolio-estate.png",
     height: "tall"
   },
   {
     id: "clinic",
-    title: "Clinic Service Tri-fold",
-    category: "Healthcare",
-    finish: "Silk stock, aqueous seal",
+    title: "Healthcare Service Flyer",
+    category: "Flyers",
+    finish: "Silk stock, bright CMYK, clean trim",
     image: "/visuals/portfolio-clinic.png",
     height: "medium"
   },
   {
     id: "gallery",
-    title: "Gallery Opening Map",
-    category: "Culture",
-    finish: "Natural stock, edge tint",
+    title: "Gallery Event Poster",
+    category: "Posters",
+    finish: "Large-format matte print, gallery-grade contrast",
     image: "/visuals/portfolio-gallery.png",
     height: "short"
   },
   {
     id: "hotel",
-    title: "Boutique Hotel Compendium",
-    category: "Hospitality",
-    finish: "Gate-fold, spot UV",
+    title: "Hospitality Brand Kit",
+    category: "Corporate",
+    finish: "Folders, cards, menus, and guest collateral",
     image: "/visuals/portfolio-hotel.png",
     height: "tall"
   },
   {
     id: "startup",
-    title: "Investor Product Foldout",
-    category: "Technology",
-    finish: "Z-fold, soft-touch",
+    title: "Startup Sales Deck Print",
+    category: "Booklets",
+    finish: "Soft-touch booklet with calibrated brand color",
     image: "/visuals/portfolio-startup.png",
     height: "medium"
   },
   {
     id: "menu",
-    title: "Seasonal Menu Insert",
-    category: "Food and Beverage",
-    finish: "Uncoated, blind deboss",
+    title: "Restaurant Menu Print",
+    category: "Menus",
+    finish: "Durable laminated inserts with premium touch",
     image: "/visuals/portfolio-menu.png",
     height: "short"
   },
   {
     id: "civic",
-    title: "Civic Welcome Foldout",
-    category: "Culture",
-    finish: "Natural stock, map crease",
+    title: "Institutional Welcome Pack",
+    category: "Corporate",
+    finish: "Folders, inserts, letterheads, and guides",
     image: "/visuals/portfolio-civic.png",
     height: "medium"
   },
   {
     id: "wellness",
-    title: "Wellness Program Guide",
-    category: "Healthcare",
-    finish: "Silk stock, spot UV",
+    title: "Wellness Program Catalog",
+    category: "Catalogs",
+    finish: "Silk catalog pages with spot UV cover",
     image: "/visuals/portfolio-wellness.png",
     height: "tall"
   },
   {
     id: "retail",
-    title: "Retail Launch Mailer",
-    category: "Retail",
-    finish: "Soft-touch, high-gloss seal",
+    title: "Retail Campaign Prints",
+    category: "Branding",
+    finish: "Flyers, cards, posters, and promotional inserts",
     image: "/visuals/portfolio-retail.png",
     height: "short"
   }
@@ -211,29 +291,39 @@ export const portfolioItems = [
 export const testimonials = [
   {
     quote:
-      "The brochure felt like a product demo in paper form. People kept opening it again before they called us.",
-    name: "Mara Benton",
-    role: "Brand Director, Atrium Homes"
+      "Brochear made our printed launch materials feel like a serious brand asset. The color, paper, and finishing were exactly on point.",
+    name: "Maya Benton",
+    role: "Brand Director, Atrium Properties"
   },
   {
     quote:
-      "Their proofing process caught issues we usually discover too late. The finished folds were immaculate.",
+      "Their proofing process caught problems before production and kept a tight deadline calm. The final print quality was excellent.",
     name: "Julian Park",
-    role: "Marketing Lead, Northline Health"
+    role: "Marketing Lead, Northline Clinics"
   },
   {
     quote:
-      "We needed premium but fast. The team gave us stock, finish, and delivery choices without making the job feel chaotic.",
+      "We needed premium catalogs, flyers, and cards for an exhibition. Everything arrived clean, consistent, and ready for the stand.",
     name: "Elena Rossi",
-    role: "Founder, Lumen Table"
+    role: "Founder, Lumen Studio"
   }
 ];
 
+export const industries = [
+  { title: "Retail and Showrooms", copy: "Launch flyers, product catalogs, posters, shelf talkers, and seasonal campaign print.", Icon: Store },
+  { title: "Real Estate", copy: "Property brochures, folders, presentation kits, posters, and open-house materials.", Icon: Building2 },
+  { title: "Healthcare", copy: "Clinic profiles, service flyers, patient guides, wellness catalogs, and appointment cards.", Icon: HeartPulse },
+  { title: "Hospitality", copy: "Menus, room collateral, event posters, guest directories, and premium brand stationery.", Icon: Hotel },
+  { title: "Education", copy: "Prospectuses, event flyers, booklets, certificates, reports, and admissions materials.", Icon: GraduationCap },
+  { title: "Finance and Corporate", copy: "Annual reports, business cards, folders, profiles, proposals, and branded documents.", Icon: Landmark }
+];
+
 export const footerLinks = [
-  { label: "Showcase", href: "#brochures" },
-  { label: "Configurator", href: "#configurator" },
+  { label: "Services", href: "#services" },
+  { label: "About", href: "#about" },
+  { label: "Process", href: "#process" },
   { label: "Work", href: "#work" },
   { label: "Quote", href: "#quote" }
 ];
 
-export const processIcons = [Layers3, BadgeCheck, Boxes, Truck];
+export const processIcons = [Handshake, Brush, BadgeCheck, Boxes, Truck];

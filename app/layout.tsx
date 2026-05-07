@@ -1,9 +1,9 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
-const title = "Brochear.com | Premium Brochure Printing and Advertising";
+const title = "Brochear.com | Premium Commercial Printing Company";
 const description =
-  "Premium brochure printing, fold engineering, paper selection, specialty finishes, and delivery for brands that need tactile advertising work.";
+  "Premium commercial printing for brochures, catalogs, flyers, business cards, posters, booklets, corporate materials, offset printing, and digital printing.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://brochure-atelier.example"),
@@ -18,10 +18,14 @@ export const metadata: Metadata = {
   description,
   keywords: [
     "brochure printing",
-    "advertising printing",
-    "tri-fold brochures",
+    "commercial printing",
+    "catalog printing",
+    "flyer printing",
+    "business card printing",
+    "offset printing",
+    "digital printing",
     "premium print finishes",
-    "custom brochure design"
+    "corporate printing"
   ],
   openGraph: {
     title,
@@ -33,7 +37,7 @@ export const metadata: Metadata = {
         url: "/visuals/hero-press-sheet.png",
         width: 1200,
         height: 900,
-        alt: "Premium printed brochure sheets in warm terracotta and plum tones"
+        alt: "Premium commercial printed sheets in a modern printing studio"
       }
     ],
     locale: "en_US",

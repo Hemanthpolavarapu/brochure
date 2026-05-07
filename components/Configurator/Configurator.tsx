@@ -23,15 +23,21 @@ export default function Configurator() {
   }, [finish.modifier, paper.modifier, quantity, size.base]);
 
   return (
-    <section className="configurator-section" id="configurator">
+    <section className="configurator-section" id="about">
       <div className="section-shell config-grid">
         <Reveal className="config-copy">
-          <span className="eyebrow">Live print configurator</span>
-          <h2 className="section-heading text-balance">Tune the tactile system before you request a proof.</h2>
+          <span className="eyebrow">About Brochear</span>
+          <h2 className="section-heading text-balance">A modern printing company for brands that care about first impressions.</h2>
           <p className="section-copy">
-            Paper, finish, size, and run length update the preview and quote estimate in real time,
-            keeping the production logic close to the creative decision.
+            Brochear produces commercial print materials that feel polished, precise, and
+            brand-safe. We help businesses move from idea to finished print with clear advice on
+            paper, finish, quantity, timelines, and production method.
           </p>
+          <div className="about-points" aria-label="Brochear production strengths">
+            <span>Offset and digital production</span>
+            <span>Premium paper and finishing guidance</span>
+            <span>Prepress checks before every run</span>
+          </div>
         </Reveal>
 
         <Reveal className="configurator panel" delay={0.08}>
@@ -81,7 +87,7 @@ export default function Configurator() {
             <div className="control-group">
               <div className="control-label">
                 <Ruler size={17} aria-hidden="true" />
-                <span>Size</span>
+                <span>Project type</span>
               </div>
               <div className="segmented-control">
                 {sizeOptions.map((option) => (
@@ -133,14 +139,14 @@ export default function Configurator() {
             <div className="estimate-panel">
               <span>
                 <Calculator size={17} aria-hidden="true" />
-                Estimate
+                Project estimate
               </span>
               <strong>{formatCurrency(estimate)}</strong>
               <p>
                 {size.panels} on {paper.grams}, {finish.label.toLowerCase()} finish.
               </p>
               <MagneticButton href="#quote" variant="accent">
-                Request proof
+                Request a quote
               </MagneticButton>
             </div>
           </motion.div>

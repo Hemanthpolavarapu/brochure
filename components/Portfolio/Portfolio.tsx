@@ -24,8 +24,8 @@ export default function Portfolio() {
     <section className="portfolio-section" id="work">
       <div className="section-shell portfolio-intro">
         <Reveal>
-          <span className="eyebrow">Selected print work</span>
-          <h2 className="section-heading text-balance">Brochures designed for touch, pacing, and recall.</h2>
+          <span className="eyebrow">Print showcase</span>
+          <h2 className="section-heading text-balance">A gallery of print that feels polished before a word is read.</h2>
         </Reveal>
         <Reveal className="portfolio-filter-wrap" delay={0.08}>
           <div className="portfolio-filter" aria-label="Portfolio filters">
@@ -62,7 +62,7 @@ export default function Portfolio() {
             >
               <Image
                 src={item.image}
-                alt={`${item.title} brochure print sample`}
+                alt={`${item.title} commercial print sample`}
                 fill
                 sizes="(max-width: 720px) 100vw, (max-width: 1120px) 50vw, 33vw"
                 className="portfolio-image"
@@ -101,7 +101,7 @@ export default function Portfolio() {
               <div className="preview-image-wrap">
                 <Image
                   src={active.image}
-                  alt={`${active.title} full brochure preview`}
+                  alt={`${active.title} full commercial print preview`}
                   fill
                   sizes="(max-width: 920px) 100vw, 58vw"
                   className="preview-image"

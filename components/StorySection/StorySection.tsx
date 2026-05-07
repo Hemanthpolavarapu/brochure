@@ -72,13 +72,14 @@ export default function StorySection() {
     <section className="story-section" id="process" ref={sectionRef}>
       <div className="section-shell story-intro">
         <Reveal>
-          <span className="eyebrow">Scrollytelling workflow</span>
-          <h2 className="section-heading text-balance">From blank panel to campaign-ready delivery.</h2>
+          <span className="eyebrow">Printing process</span>
+          <h2 className="section-heading text-balance">A calm production timeline from brief to delivery.</h2>
         </Reveal>
         <Reveal delay={0.08}>
           <p className="section-copy">
-            The production path stays visible while the page moves, connecting creative choices
-            with press realities and fulfillment constraints.
+            Premium print is made through controlled decisions. We keep each step transparent so
+            your materials feel intentional, accurate, and ready for the moment they reach your
+            audience.
           </p>
         </Reveal>
       </div>

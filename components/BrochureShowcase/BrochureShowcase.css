@@ -16,6 +16,84 @@
   margin: 0;
 }
 
+.service-card-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.9rem;
+  margin-top: clamp(2.5rem, 5vw, 4.5rem);
+}
+
+.service-card {
+  position: relative;
+  display: grid;
+  min-height: 265px;
+  align-content: start;
+  overflow: hidden;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(18px);
+  transition:
+    transform 220ms var(--ease-soft),
+    border-color 220ms var(--ease-out),
+    box-shadow 220ms var(--ease-out);
+}
+
+.service-card::after {
+  position: absolute;
+  inset: auto 1rem 1rem 1rem;
+  height: 1px;
+  background: #E6E6E6;
+  content: "";
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 260ms var(--ease-soft);
+}
+
+.service-card:hover {
+  transform: translateY(-7px);
+  border-color: #BDBDBD;
+  box-shadow: 0 22px 52px rgba(0, 0, 0, 0.11);
+}
+
+.service-card:hover::after {
+  transform: scaleX(1);
+}
+
+.service-icon {
+  display: grid;
+  width: 3rem;
+  height: 3rem;
+  place-items: center;
+  border: 1px solid #DADADA;
+  border-radius: 6px;
+  background: #FFFFFF;
+  color: #606060;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+.service-card h3 {
+  margin: 1.25rem 0 0;
+  color: #606060;
+  font-size: clamp(1.18rem, 1.7vw, 1.52rem);
+  line-height: 1.02;
+}
+
+.service-card p {
+  margin: 0.72rem 0 1rem;
+  color: #808080;
+  line-height: 1.55;
+}
+
+.service-card span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: auto;
+  color: #606060;
+  font-size: 0.78rem;
+  font-weight: 850;
+}
+
 .showcase-controls {
   display: flex;
   justify-content: flex-end;
@@ -304,6 +382,10 @@
     grid-template-columns: 1fr;
   }
 
+  .service-card-grid {
+    grid-template-columns: 1fr;
+  }
+
   .showcase-controls {
     justify-content: flex-start;
   }
@@ -322,5 +404,11 @@
 
   .detail-copy {
     padding-right: 0;
+  }
+}
+
+@media (min-width: 781px) and (max-width: 1120px) {
+  .service-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }

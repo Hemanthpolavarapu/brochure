@@ -11,16 +11,16 @@ import MagneticButton from "@/components/ui/MagneticButton";
 import "./Hero.css";
 
 const words = [
-  { text: "Brochures", mobileBreak: true },
-  { text: "built", mobileBreak: false },
-  { text: "to", mobileBreak: true },
-  { text: "move", mobileBreak: true },
-  { text: "people.", mobileBreak: false }
+  { text: "Printing", mobileBreak: true },
+  { text: "that", mobileBreak: false },
+  { text: "makes", mobileBreak: true },
+  { text: "brands", mobileBreak: true },
+  { text: "feel premium.", mobileBreak: false }
 ];
 const navItems = [
-  { label: "Brochures", href: "#brochures" },
+  { label: "Services", href: "#services" },
+  { label: "About", href: "#about" },
   { label: "Process", href: "#process" },
-  { label: "Configurator", href: "#configurator" },
   { label: "Work", href: "#work" }
 ];
 
@@ -67,9 +67,9 @@ export default function Hero() {
             animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
             transition={{ duration: 0.46, ease: [0.22, 1, 0.36, 1] }}
           >
-            Premium advertising print
+            Commercial printing for modern businesses
           </motion.span>
-          <h1 className="hero-title" aria-label="Brochures built to move people.">
+          <h1 className="hero-title" aria-label="Printing that makes brands feel premium.">
             {words.map((word, index) => (
               <Fragment key={word.text}>
                 <motion.span
@@ -93,8 +93,9 @@ export default function Hero() {
             animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
             transition={{ duration: 0.52, ease: [0.22, 1, 0.36, 1], delay: 0.42 }}
           >
-            High-touch brochure design, precision folds, premium paper, and campaign-ready
-            delivery for brands that need print to feel as engineered as their digital product.
+            Professional printing solutions for modern businesses. Brochear turns brochures,
+            catalogs, flyers, cards, posters, and corporate collateral into sharp physical brand
+            experiences that earn attention the moment they are held.
           </motion.p>
           <motion.div
             className="hero-cta-row"
@@ -102,10 +103,10 @@ export default function Hero() {
             animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
             transition={{ duration: 0.52, ease: [0.22, 1, 0.36, 1], delay: 0.52 }}
           >
-            <MagneticButton href="#configurator">Build your brochure</MagneticButton>
-            <a className="ghost-link" href="#work">
+            <MagneticButton href="#quote">Get a Quote</MagneticButton>
+            <a className="ghost-link" href="#services">
               <MousePointer2 size={18} aria-hidden="true" />
-              Explore finished work
+              Explore Services
             </a>
           </motion.div>
         </div>
@@ -120,7 +121,7 @@ export default function Hero() {
           <div className="hero-paper hero-paper-main">
             <Image
               src="/visuals/hero-press-sheet.png"
-              alt="Layered premium brochure sheets with warm paper, terracotta, and plum ink tones"
+              alt="Premium commercial print sheets arranged in a modern studio"
               width={900}
               height={900}
               priority
@@ -167,12 +168,12 @@ export default function Hero() {
       </div>
 
       <div className="hero-meta section-shell">
-        <span>Fold strategy</span>
+        <span>Offset and digital printing</span>
         <span>CMYK calibration</span>
-        <span>Finish prototyping</span>
+        <span>Premium finishing</span>
       </div>
 
-      <a className="scroll-cue" href="#brochures" aria-label="Scroll to brochure showcase">
+      <a className="scroll-cue" href="#services" aria-label="Scroll to printing services">
         <ArrowDown size={18} aria-hidden="true" />
       </a>
     </section>

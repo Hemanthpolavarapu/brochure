@@ -6,15 +6,15 @@ export default function Footer() {
   return (
     <footer className="site-footer">
       <div className="footer-marquee" aria-hidden="true">
-        <span>fold</span>
+        <span>print</span>
         <span>proof</span>
-        <span>foil</span>
-        <span>bind</span>
+        <span>press</span>
+        <span>finish</span>
         <span>ship</span>
-        <span>fold</span>
+        <span>print</span>
         <span>proof</span>
-        <span>foil</span>
-        <span>bind</span>
+        <span>press</span>
+        <span>finish</span>
         <span>ship</span>
       </div>
       <div className="section-shell footer-grid">
@@ -37,9 +37,9 @@ export default function Footer() {
           ))}
         </nav>
         <address>
-          <a href="mailto:hello@brochureatelier.example">hello@brochureatelier.example</a>
+          <a href="mailto:hello@brochear.com">hello@brochear.com</a>
           <a href="tel:+15550184">+1 555 0184</a>
-          <span>Press floor 04, Design District</span>
+          <span>Commercial printing studio</span>
         </address>
       </div>
     </footer>

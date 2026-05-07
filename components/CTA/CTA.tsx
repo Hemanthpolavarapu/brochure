@@ -17,11 +17,11 @@ export default function CTA() {
     <section className="cta-section" id="quote">
       <div className="section-shell cta-panel">
         <div className="cta-copy">
-          <span className="eyebrow">Press-ready next step</span>
-          <h2>Bring the campaign into people&apos;s hands.</h2>
+          <span className="eyebrow">Get a print quote</span>
+          <h2>Make your next print run look unmistakably premium.</h2>
           <p>
-            Share a short brief and get a paper, finish, fold, and price recommendation shaped
-            around your launch window.
+            Tell us what you need printed and we&apos;ll recommend the right production path,
+            paper, finish, quantity, and delivery plan for a result your business can trust.
           </p>
         </div>
         <form className="quote-form" onSubmit={handleSubmit}>
@@ -32,10 +32,10 @@ export default function CTA() {
               <Send size={18} aria-hidden="true" />
             </button>
           </div>
-          <MagneticButton href="mailto:hello@brochureatelier.example?subject=Brochure%20quote" variant="accent">
-            Email the studio
+          <MagneticButton href="mailto:hello@brochear.com?subject=Printing%20quote" variant="accent">
+            Email Brochear
           </MagneticButton>
-          {sent ? <p className="form-state">Brief received. The studio will reply with a proof path.</p> : null}
+          {sent ? <p className="form-state">Quote request received. Brochear will reply with a clear print plan.</p> : null}
         </form>
       </div>
     </section>
