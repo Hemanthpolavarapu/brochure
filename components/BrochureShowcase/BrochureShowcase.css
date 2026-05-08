@@ -26,10 +26,10 @@
 .service-card {
   position: relative;
   display: grid;
-  min-height: 265px;
+  gap: 0.75rem;
   align-content: start;
   overflow: hidden;
-  padding: 1rem;
+  padding: 1.5rem;
   background: rgba(255, 255, 255, 0.88);
   backdrop-filter: blur(18px);
   transition:
@@ -61,21 +61,23 @@
 
 .service-icon {
   display: grid;
-  width: 3rem;
-  height: 3rem;
+  width: 3.2rem;
+  height: 3.2rem;
   place-items: center;
   border: 1px solid #DADADA;
   border-radius: 6px;
   background: #FFFFFF;
   color: #606060;
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  flex-shrink: 0;
 }
 
 .service-card h3 {
-  margin: 1.25rem 0 0;
+  margin: 0;
   color: #606060;
-  font-size: clamp(1.18rem, 1.7vw, 1.52rem);
-  line-height: 1.02;
+  font-size: clamp(1.12rem, 1.6vw, 1.48rem);
+  line-height: 1.2;
+  font-weight: 700;
 }
 
 .service-card p {
