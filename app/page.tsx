@@ -6,7 +6,6 @@ import Hero from "@/components/Hero/Hero";
 import Industries from "@/components/Industries/Industries";
 import Portfolio from "@/components/Portfolio/Portfolio";
 import SmoothScroll from "@/components/SmoothScroll";
-import StorySection from "@/components/StorySection/StorySection";
 import Testimonials from "@/components/Testimonials/Testimonials";
 import WhyUs from "@/components/WhyUs/WhyUs";
 
@@ -62,7 +61,6 @@ export default function Home() {
       <main>
         <Hero />
         <BrochureShowcase />
-        <StorySection />
         <Configurator />
         <WhyUs />
         <Portfolio />

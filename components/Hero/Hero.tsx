@@ -20,8 +20,8 @@ const words = [
 const navItems = [
   { label: "Services", href: "#services" },
   { label: "About", href: "#about" },
-  { label: "Process", href: "#process" },
-  { label: "Work", href: "#work" }
+  { label: "Work", href: "#work" },
+  { label: "Quote", href: "#quote" }
 ];
 
 export default function Hero() {

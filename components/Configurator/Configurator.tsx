@@ -1,13 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Calculator, FileText, Layers3, Ruler, SlidersHorizontal } from "lucide-react";
-import { useMemo, useState } from "react";
+import { FileText, Layers3, Ruler, SlidersHorizontal } from "lucide-react";
+import { useState } from "react";
 import BrochureMockup from "@/components/ui/BrochureMockup";
-import MagneticButton from "@/components/ui/MagneticButton";
 import Reveal from "@/components/ui/Reveal";
 import { finishOptions, paperOptions, sizeOptions } from "@/lib/data";
-import { formatCurrency } from "@/lib/utils";
 import "./Configurator.css";
 
 export default function Configurator() {
@@ -15,12 +13,6 @@ export default function Configurator() {
   const [finish, setFinish] = useState(finishOptions[1]);
   const [size, setSize] = useState(sizeOptions[0]);
   const [quantity, setQuantity] = useState(500);
-
-  const estimate = useMemo(() => {
-    const runFactor = quantity / 500;
-    const economy = Math.max(0.72, 1 - (quantity - 500) / 9000);
-    return Math.round((size.base + paper.modifier + finish.modifier) * runFactor * economy);
-  }, [finish.modifier, paper.modifier, quantity, size.base]);
 
   return (
     <section className="configurator-section" id="about">
@@ -116,8 +108,8 @@ export default function Configurator() {
                 className="quantity-range"
                 type="range"
                 min="250"
-                max="5000"
-                step="250"
+                max="1000000"
+                step="10000"
                 value={quantity}
                 onChange={(event) => setQuantity(Number(event.target.value))}
               />
@@ -136,19 +128,6 @@ export default function Configurator() {
               finish={`${paper.grams} / ${finish.label}`}
               active
             />
-            <div className="estimate-panel">
-              <span>
-                <Calculator size={17} aria-hidden="true" />
-                Project estimate
-              </span>
-              <strong>{formatCurrency(estimate)}</strong>
-              <p>
-                {size.panels} on {paper.grams}, {finish.label.toLowerCase()} finish.
-              </p>
-              <MagneticButton href="#quote" variant="accent">
-                Request a quote
-              </MagneticButton>
-            </div>
           </motion.div>
         </Reveal>
       </div>

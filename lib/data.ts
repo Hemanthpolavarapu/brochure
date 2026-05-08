@@ -76,53 +76,27 @@ export const brochureTypes = [
 export const serviceCards = [
   {
     title: "Brochure Printing",
-    copy: "Elegant folded brochures for launches, sales teams, events, and premium brand storytelling.",
     Icon: BookOpen
   },
   {
-    title: "Flyer Printing",
-    copy: "High-impact flyers with clean hierarchy, bold color, and fast campaign turnaround.",
+    title: "Branding Materials",
+    Icon: Palette
+  },
+  {
+    title: "Marketing Print",
     Icon: Megaphone
   },
   {
-    title: "Catalog Printing",
-    copy: "Product catalogs, lookbooks, and company profiles finished for serious presentation.",
+    title: "Multi-Page Print",
     Icon: FileStack
   },
   {
-    title: "Business Card Printing",
-    copy: "Sharp cards with premium stock, refined finishes, and details people remember.",
+    title: "Brand Essentials",
     Icon: CreditCard
   },
   {
-    title: "Corporate Printing",
-    copy: "Profiles, folders, letterheads, reports, and internal brand materials in one system.",
-    Icon: BriefcaseBusiness
-  },
-  {
-    title: "Offset Printing",
-    copy: "Consistent, economical, high-volume production for demanding commercial print runs.",
+    title: "Production",
     Icon: Printer
-  },
-  {
-    title: "Digital Printing",
-    copy: "Fast, flexible, precise short-run printing when timelines move quickly.",
-    Icon: ScanLine
-  },
-  {
-    title: "Poster Printing",
-    copy: "Large-format posters with cinematic contrast, crisp edges, and showroom presence.",
-    Icon: ReceiptText
-  },
-  {
-    title: "Booklet Printing",
-    copy: "Premium stitched, bound, and trimmed booklets for portfolios, guides, and proposals.",
-    Icon: Layers3
-  },
-  {
-    title: "Branding Materials",
-    copy: "Launch-ready marketing print materials that keep every brand touchpoint consistent.",
-    Icon: Palette
   }
 ];
 
@@ -310,18 +284,17 @@ export const testimonials = [
 ];
 
 export const industries = [
-  { title: "Retail and Showrooms", copy: "Launch flyers, product catalogs, posters, shelf talkers, and seasonal campaign print.", Icon: Store },
-  { title: "Real Estate", copy: "Property brochures, folders, presentation kits, posters, and open-house materials.", Icon: Building2 },
-  { title: "Healthcare", copy: "Clinic profiles, service flyers, patient guides, wellness catalogs, and appointment cards.", Icon: HeartPulse },
-  { title: "Hospitality", copy: "Menus, room collateral, event posters, guest directories, and premium brand stationery.", Icon: Hotel },
-  { title: "Education", copy: "Prospectuses, event flyers, booklets, certificates, reports, and admissions materials.", Icon: GraduationCap },
-  { title: "Finance and Corporate", copy: "Annual reports, business cards, folders, profiles, proposals, and branded documents.", Icon: Landmark }
+  { title: "Retail and Showrooms", Icon: Store },
+  { title: "Real Estate", Icon: Building2 },
+  { title: "Healthcare", Icon: HeartPulse },
+  { title: "Hospitality", Icon: Hotel },
+  { title: "Education", Icon: GraduationCap },
+  { title: "Finance and Corporate", Icon: Landmark }
 ];
 
 export const footerLinks = [
   { label: "Services", href: "#services" },
   { label: "About", href: "#about" },
-  { label: "Process", href: "#process" },
   { label: "Work", href: "#work" },
   { label: "Quote", href: "#quote" }
 ];

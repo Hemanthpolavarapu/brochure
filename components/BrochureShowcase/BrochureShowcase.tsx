@@ -1,7 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowLeft, ArrowRight, CheckCircle2, Maximize2, X } from "lucide-react";
+import { ArrowLeft, ArrowRight, Maximize2, X } from "lucide-react";
 import { useRef, useState } from "react";
 import { brochureTypes, serviceCards } from "@/lib/data";
 import BrochureMockup from "@/components/ui/BrochureMockup";
@@ -64,17 +64,12 @@ export default function BrochureShowcase() {
       </div>
 
       <div className="section-shell service-card-grid">
-        {serviceCards.map(({ Icon, title, copy }, index) => (
+        {serviceCards.map(({ Icon, title }, index) => (
           <Reveal className="service-card panel" delay={index * 0.035} key={title}>
             <div className="service-icon">
               <Icon size={22} aria-hidden="true" />
             </div>
             <h3>{title}</h3>
-            <p>{copy}</p>
-            <span>
-              <CheckCircle2 size={16} aria-hidden="true" />
-              Print-ready guidance
-            </span>
           </Reveal>
         ))}
       </div>

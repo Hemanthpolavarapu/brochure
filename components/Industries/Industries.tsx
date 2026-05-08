@@ -21,14 +21,13 @@ export default function Industries() {
       </div>
 
       <div className="section-shell industries-grid">
-        {industries.map(({ Icon, title, copy }, index) => (
+        {industries.map(({ Icon, title }, index) => (
           <Reveal className="industry-card panel" delay={index * 0.045} key={title}>
             <div className="industry-icon">
               <Icon size={22} aria-hidden="true" />
             </div>
             <div>
               <h3>{title}</h3>
-              <p>{copy}</p>
             </div>
           </Reveal>
         ))}

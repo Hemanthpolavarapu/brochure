@@ -50,13 +50,12 @@ export default function WhyUs() {
       </div>
 
       <div className="section-shell trust-card-grid">
-        {trustCards.map(({ Icon, title, copy }, index) => (
+        {trustCards.map(({ Icon, title }, index) => (
           <Reveal className="trust-card panel" delay={index * 0.05} key={title}>
             <div className="trust-icon">
               <Icon size={22} aria-hidden="true" />
             </div>
             <h3>{title}</h3>
-            <p>{copy}</p>
           </Reveal>
         ))}
       </div>
