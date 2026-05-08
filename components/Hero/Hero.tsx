@@ -120,7 +120,7 @@ export default function Hero() {
           <div className="press-orbit" aria-hidden="true" />
           <div className="hero-paper hero-paper-main">
             <Image
-              src="/visuals/hero-press-sheet.png"
+              src="/visuals/hero-paper-1.jpeg"
               alt="Premium commercial print sheets arranged in a modern studio"
               width={900}
               height={900}
@@ -130,7 +130,7 @@ export default function Hero() {
           </div>
           <div className="hero-paper hero-paper-left" aria-hidden="true">
             <Image
-              src="/visuals/portfolio-gallery.png"
+              src="/visuals/hero-paper-2.jpeg"
               alt=""
               width={640}
               height={820}
@@ -139,7 +139,7 @@ export default function Hero() {
           </div>
           <div className="hero-paper hero-paper-right" aria-hidden="true">
             <Image
-              src="/visuals/portfolio-startup.png"
+              src="/visuals/hero-paper-3.jpeg"
               alt=""
               width={640}
               height={820}
@@ -148,7 +148,7 @@ export default function Hero() {
           </div>
           <div className="hero-paper hero-paper-low" aria-hidden="true">
             <Image
-              src="/visuals/portfolio-menu.png"
+              src="/visuals/hero-paper-4.jpeg"
               alt=""
               width={640}
               height={820}
@@ -166,52 +166,6 @@ export default function Hero() {
           </div>
         </motion.div>
       </div>
-
-      <motion.div
-        className="hero-gallery section-shell"
-        initial={reduceMotion ? false : { opacity: 0, y: 32 }}
-        animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.8 }}
-      >
-        <div className="gallery-grid">
-          <div className="gallery-item gallery-item-1">
-            <Image
-              src="/visuals/portfolio-estate.png"
-              alt="Luxury property brochure example"
-              width={540}
-              height={680}
-              className="gallery-image"
-            />
-          </div>
-          <div className="gallery-item gallery-item-2">
-            <Image
-              src="/visuals/portfolio-clinic.png"
-              alt="Healthcare service flyer example"
-              width={540}
-              height={680}
-              className="gallery-image"
-            />
-          </div>
-          <div className="gallery-item gallery-item-3">
-            <Image
-              src="/visuals/portfolio-hotel.png"
-              alt="Hospitality brand kit example"
-              width={540}
-              height={680}
-              className="gallery-image"
-            />
-          </div>
-          <div className="gallery-item gallery-item-4">
-            <Image
-              src="/visuals/portfolio-wellness.png"
-              alt="Wellness catalog example"
-              width={540}
-              height={680}
-              className="gallery-image"
-            />
-          </div>
-        </div>
-      </motion.div>
 
       <div className="hero-meta section-shell">
         <span>Offset and digital printing</span>

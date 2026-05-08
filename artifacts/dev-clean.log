@@ -1,0 +1,14 @@
+
+> brochure-atelier@1.0.0 dev
+> next dev --port 3000
+
+   ▲ Next.js 15.5.15
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.1.3:3000
+
+ ✓ Starting...
+ ✓ Ready in 3.3s
+ ○ Compiling / ...
+ ✓ Compiled / in 9.6s (1693 modules)
+ GET / 200 in 11285ms
+ GET / 200 in 497ms

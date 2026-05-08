@@ -43,6 +43,10 @@
 }
 
 .trust-card {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: 0.95rem;
   padding: 1.5rem;
   background: #FFFFFF;
   transition:
