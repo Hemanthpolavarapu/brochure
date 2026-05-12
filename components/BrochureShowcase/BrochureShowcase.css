@@ -61,6 +61,7 @@
 }
 
 .service-icon {
+  position: relative;
   display: grid;
   width: 3.2rem;
   height: 3.2rem;
@@ -71,6 +72,11 @@
   color: #606060;
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
   flex-shrink: 0;
+  overflow: hidden;
+}
+
+.service-thumb {
+  object-fit: cover;
 }
 
 .service-card h3 {
@@ -140,10 +146,21 @@
   color: #808080;
 }
 
-.showcase-card .brochure-mockup {
+.showcase-photo-wrap {
+  position: relative;
   align-self: center;
   justify-self: center;
   width: min(100%, 265px);
+  aspect-ratio: 0.82;
+  overflow: hidden;
+  border: 1px solid #E6E6E6;
+  border-radius: 14px;
+  background: #FFFFFF;
+  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.12);
+}
+
+.showcase-photo {
+  object-fit: cover;
 }
 
 .showcase-card-copy {
@@ -317,6 +334,16 @@
   z-index: 2;
 }
 
+.detail-photo-wrap {
+  position: relative;
+  min-height: 560px;
+  overflow: hidden;
+  border: 1px solid #E6E6E6;
+  border-radius: 16px;
+  background: #FFFFFF;
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.1);
+}
+
 .detail-copy {
   align-self: center;
   padding-right: 2.5rem;
@@ -390,6 +417,10 @@
 
   .detail-panel {
     grid-template-columns: 1fr;
+  }
+
+  .detail-photo-wrap {
+    min-height: 420px;
   }
 
   .detail-copy {

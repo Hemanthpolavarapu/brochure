@@ -2,9 +2,9 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import { ArrowLeft, ArrowRight, Maximize2, X } from "lucide-react";
+import Image from "next/image";
 import { useRef, useState } from "react";
 import { brochureTypes, serviceCards } from "@/lib/data";
-import BrochureMockup from "@/components/ui/BrochureMockup";
 import Reveal from "@/components/ui/Reveal";
 import "./BrochureShowcase.css";
 
@@ -23,7 +23,15 @@ function ShowcaseCard({ item, onOpen }: { item: Brochure; onOpen: (item: Brochur
         <span className="tag">{item.fold}</span>
         <Maximize2 size={18} aria-hidden="true" />
       </div>
-      <BrochureMockup fold={item.id} finish={item.finish} />
+      <div className="showcase-photo-wrap">
+        <Image
+          src={item.image}
+          alt={item.imageAlt}
+          fill
+          sizes="(max-width: 780px) 76vw, 265px"
+          className="showcase-photo"
+        />
+      </div>
       <div className="showcase-card-copy">
         <h3>{item.name}</h3>
       </div>
@@ -63,10 +71,16 @@ export default function BrochureShowcase() {
       </div>
 
       <div className="section-shell service-card-grid">
-        {serviceCards.map(({ Icon, title }, index) => (
+        {serviceCards.map(({ image, imageAlt, title }, index) => (
           <Reveal className="service-card panel" delay={index * 0.035} key={title}>
             <div className="service-icon">
-              <Icon size={22} aria-hidden="true" />
+              <Image
+                src={image}
+                alt={imageAlt}
+                fill
+                sizes="52px"
+                className="service-thumb"
+              />
             </div>
             <h3>{title}</h3>
           </Reveal>
@@ -110,7 +124,15 @@ export default function BrochureShowcase() {
               <button className="icon-button detail-close" type="button" onClick={() => setActive(null)} aria-label="Close detail panel">
                 <X size={18} aria-hidden="true" />
               </button>
-              <BrochureMockup fold={active.id} finish={active.finish} active />
+              <div className="detail-photo-wrap">
+                <Image
+                  src={active.image}
+                  alt={active.imageAlt}
+                  fill
+                  sizes="(max-width: 780px) 90vw, 420px"
+                  className="showcase-photo"
+                />
+              </div>
               <div className="detail-copy">
                 <span className="eyebrow">{active.fold}</span>
                 <h3 id="brochure-detail-title">{active.name}</h3>

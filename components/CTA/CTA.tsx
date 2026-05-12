@@ -64,10 +64,6 @@ ${formData.message}
         <div className="cta-copy">
           <span className="eyebrow">Start a quote</span>
           <h2>Make your next print run look unmistakably premium.</h2>
-          <p>
-            Tell us what you need printed and we&apos;ll recommend the right production path,
-            paper, finish, quantity, and delivery plan for a result your business can trust.
-          </p>
         </div>
 
         <form className="quote-form" onSubmit={handleSubmit}>

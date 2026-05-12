@@ -62,6 +62,7 @@
 }
 
 .trust-icon {
+  position: relative;
   display: grid;
   width: 3.2rem;
   height: 3.2rem;
@@ -71,6 +72,11 @@
   background: #FFFFFF;
   color: #606060;
   flex-shrink: 0;
+  overflow: hidden;
+}
+
+.trust-thumb {
+  object-fit: cover;
 }
 
 .trust-card h3 {

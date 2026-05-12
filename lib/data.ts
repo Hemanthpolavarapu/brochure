@@ -1,19 +1,9 @@
 import {
   BadgeCheck,
-  BookOpen,
   Boxes,
   Brush,
-  Clock3,
-  CreditCard,
-  FileStack,
   Handshake,
-  Megaphone,
-  Palette,
-  Printer,
-  ShieldCheck,
-  Sparkles,
-  Truck,
-  WandSparkles
+  Truck
 } from "lucide-react";
 
 export const brochureTypes = [
@@ -25,6 +15,8 @@ export const brochureTypes = [
     paper: "250-350gsm coated and matte stocks",
     finish: "Soft-touch, UV, foil, lamination",
     price: "Quote by run",
+    image: "/visuals/print-photo/service-marketing-print.jpg",
+    imageAlt: "Real marketing flyers and printed brochures on a desk with visible paper texture",
     specs: ["Bi-fold", "Tri-fold", "Z-fold", "Gate-fold"],
     leadTime: "3-7 business days"
   },
@@ -36,6 +28,8 @@ export const brochureTypes = [
     paper: "Art paper, silk, matte, uncoated",
     finish: "Saddle stitch, perfect bind, UV",
     price: "Quote by pages",
+    image: "/visuals/print-photo/service-multi-page.jpg",
+    imageAlt: "Hands flipping pages of an open printed booklet in natural light",
     specs: ["Product catalogs", "Lookbooks", "Manuals", "Sales books"],
     leadTime: "5-10 business days"
   },
@@ -47,6 +41,8 @@ export const brochureTypes = [
     paper: "Premium card and writing stocks",
     finish: "Embossing, spot UV, foil, matte",
     price: "Quote by kit",
+    image: "/visuals/print-photo/service-brand-essentials.jpg",
+    imageAlt: "Premium stationery with envelopes and branded paper materials arranged on a wooden desk",
     specs: ["Cards", "Folders", "Profiles", "Stationery"],
     leadTime: "4-8 business days"
   },
@@ -58,6 +54,8 @@ export const brochureTypes = [
     paper: "Flexible stocks for short and bulk runs",
     finish: "Color calibration, trimming, binding",
     price: "Quote by quantity",
+    image: "/visuals/print-photo/service-production.jpg",
+    imageAlt: "Industrial printing press with ink rollers and sheets moving through the machine",
     specs: ["Short runs", "Bulk runs", "CMYK control", "Preflight"],
     leadTime: "2-10 business days"
   }
@@ -66,27 +64,33 @@ export const brochureTypes = [
 export const serviceCards = [
   {
     title: "Brochure Printing",
-    Icon: BookOpen
+    image: "/visuals/print-photo/thumb-brochure-corner.jpg",
+    imageAlt: "Close crop of printed brochure edges on a wooden table"
   },
   {
     title: "Branding Materials",
-    Icon: Palette
+    image: "/visuals/print-photo/thumb-stationery-set.jpg",
+    imageAlt: "Minimal stationery paper and envelope detail"
   },
   {
     title: "Marketing Print",
-    Icon: Megaphone
+    image: "/visuals/print-photo/thumb-flyer-stack.jpg",
+    imageAlt: "Stack of real printed flyers with paper grain"
   },
   {
     title: "Multi-Page Print",
-    Icon: FileStack
+    image: "/visuals/print-photo/thumb-booklet-pages.jpg",
+    imageAlt: "Open printed booklet pages being turned by hand"
   },
   {
     title: "Brand Essentials",
-    Icon: CreditCard
+    image: "/visuals/print-photo/thumb-menu-edge.jpg",
+    imageAlt: "Rolled poster and printed paper edge detail"
   },
   {
     title: "Production",
-    Icon: Printer
+    image: "/visuals/print-photo/thumb-press-sheets.jpg",
+    imageAlt: "Printing press rollers with paper moving through production"
   }
 ];
 
@@ -148,32 +152,38 @@ export const trustCards = [
   {
     title: "Premium Print Quality",
     copy: "Sharp color, clean trim, refined stocks, and finish control give every piece a high-end commercial feel.",
-    Icon: Printer
+    image: "/visuals/print-photo/why-paper-texture.jpg",
+    imageAlt: "Close-up of textured printed paper showing premium stock"
   },
   {
     title: "Fast Delivery",
     copy: "Production schedules are built around real launch dates, with quick proofs and reliable dispatch windows.",
-    Icon: Clock3
+    image: "/visuals/print-photo/why-cutting-precision.jpg",
+    imageAlt: "Printed photo sheets arranged cleanly for finishing"
   },
   {
     title: "Modern Printing Technology",
     copy: "Digital and offset workflows support short runs, bulk production, accurate color, and flexible finishing.",
-    Icon: BadgeCheck
+    image: "/visuals/print-photo/why-press-tech.jpg",
+    imageAlt: "Offset printing press machinery with ink rollers"
   },
   {
     title: "Creative Design Support",
     copy: "From file cleanup to layout guidance, the studio helps your brand look intentional in print.",
-    Icon: WandSparkles
+    image: "/visuals/print-photo/why-design-support.jpg",
+    imageAlt: "Business cards and stationery laid out for brand review"
   },
   {
     title: "Reliable Service",
     copy: "Clear proofs, practical recommendations, and consistent communication keep every print order moving.",
-    Icon: ShieldCheck
+    image: "/visuals/print-photo/why-ink-detail.jpg",
+    imageAlt: "Colorful printed poster rolls with rich ink and paper edges"
   },
   {
     title: "Affordable Solutions",
     copy: "Smart material choices and production planning help you get premium results without waste.",
-    Icon: Sparkles
+    image: "/visuals/print-photo/why-premium-finish.jpg",
+    imageAlt: "Minimal paper stationery with clean premium finish"
   }
 ];
 
@@ -183,7 +193,7 @@ export const portfolioItems = [
     title: "Luxury Property Brochure",
     category: "Brochures",
     finish: "Velvet matte stock, foil detail, precision folds",
-    image: "/visuals/portfolio-estate.png",
+    image: "/visuals/print-photo/portfolio-brochures-table.jpg",
     height: "tall"
   },
   {
@@ -191,7 +201,7 @@ export const portfolioItems = [
     title: "Healthcare Service Flyer",
     category: "Flyers",
     finish: "Silk stock, bright CMYK, clean trim",
-    image: "/visuals/portfolio-clinic.png",
+    image: "/visuals/print-photo/portfolio-marketing-flyers.jpg",
     height: "medium"
   },
   {
@@ -199,7 +209,7 @@ export const portfolioItems = [
     title: "Gallery Event Poster",
     category: "Posters",
     finish: "Large-format matte print, gallery-grade contrast",
-    image: "/visuals/portfolio-gallery.png",
+    image: "/visuals/print-photo/portfolio-rolled-posters.jpg",
     height: "short"
   },
   {
@@ -207,7 +217,7 @@ export const portfolioItems = [
     title: "Hospitality Brand Kit",
     category: "Corporate",
     finish: "Folders, cards, menus, and guest collateral",
-    image: "/visuals/portfolio-hotel.png",
+    image: "/visuals/print-photo/portfolio-brand-stationery.jpg",
     height: "tall"
   },
   {
@@ -215,7 +225,7 @@ export const portfolioItems = [
     title: "Startup Sales Deck Print",
     category: "Booklets",
     finish: "Soft-touch booklet with calibrated brand color",
-    image: "/visuals/portfolio-startup.png",
+    image: "/visuals/print-photo/portfolio-magazine-hands.jpg",
     height: "medium"
   },
   {
@@ -223,7 +233,7 @@ export const portfolioItems = [
     title: "Restaurant Menu Print",
     category: "Menus",
     finish: "Durable laminated inserts with premium touch",
-    image: "/visuals/portfolio-menu.png",
+    image: "/visuals/print-photo/portfolio-printed-photos.jpg",
     height: "short"
   },
   {
@@ -231,7 +241,7 @@ export const portfolioItems = [
     title: "Institutional Welcome Pack",
     category: "Corporate",
     finish: "Folders, inserts, letterheads, and guides",
-    image: "/visuals/portfolio-civic.png",
+    image: "/visuals/print-photo/portfolio-business-cards.jpg",
     height: "medium"
   },
   {
@@ -239,7 +249,7 @@ export const portfolioItems = [
     title: "Wellness Program Catalog",
     category: "Catalogs",
     finish: "Silk catalog pages with spot UV cover",
-    image: "/visuals/portfolio-wellness.png",
+    image: "/visuals/print-photo/portfolio-booklet-pages.jpg",
     height: "tall"
   },
   {
@@ -247,7 +257,7 @@ export const portfolioItems = [
     title: "Retail Campaign Prints",
     category: "Branding",
     finish: "Flyers, cards, posters, and promotional inserts",
-    image: "/visuals/portfolio-retail.png",
+    image: "/visuals/print-photo/portfolio-print-press.jpg",
     height: "short"
   }
 ];
