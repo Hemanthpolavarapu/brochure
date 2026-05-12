@@ -1,12 +1,12 @@
 .portfolio-section {
-  padding: clamp(5rem, 10vw, 9rem) 0;
+  padding: clamp(3.5rem, 7vw, 6.25rem) 0;
   background: #FFFFFF;
 }
 
 .portfolio-intro {
   display: grid;
   grid-template-columns: minmax(0, 0.95fr) minmax(300px, 1.05fr);
-  gap: 2rem;
+  gap: clamp(1.25rem, 3vw, 2rem);
   align-items: end;
 }
 
@@ -19,6 +19,7 @@
   flex-wrap: wrap;
   justify-content: flex-end;
   gap: 0.5rem;
+  max-width: 100%;
   color: #808080;
 }
 
@@ -35,10 +36,10 @@
 .masonry-grid {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(3, minmax(220px, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: clamp(0.85rem, 1.6vw, 1.2rem);
   min-height: auto;
-  margin-top: clamp(2.5rem, 6vw, 5rem);
+  margin-top: clamp(1.8rem, 4.5vw, 3.5rem);
   background: #FFFFFF;
 }
 
@@ -49,7 +50,7 @@
   margin: 0;
   overflow: hidden;
   border: 1px solid #E6E6E6;
-  border-radius: 8px;
+  border-radius: 16px;
   background: #FFFFFF;
   color: #606060;
   text-align: left;
@@ -75,7 +76,7 @@
 .portfolio-short,
 .portfolio-medium,
 .portfolio-tall {
-  height: 430px;
+  height: clamp(300px, 31vw, 430px);
 }
 
 .portfolio-image {
@@ -102,7 +103,7 @@
   gap: 0.22rem;
   padding: 0.8rem;
   border: 1px solid #E6E6E6;
-  border-radius: 8px;
+  border-radius: 12px;
   background: #FFFFFF;
   color: #606060;
   transform: translateY(18px);
@@ -157,7 +158,7 @@
   gap: 1rem;
   overflow: auto;
   padding: 1rem;
-  border-radius: 8px;
+  border-radius: 16px;
   background: #FFFFFF;
 }
 
@@ -173,7 +174,7 @@
   min-height: 620px;
   overflow: hidden;
   border: 1px solid #E6E6E6;
-  border-radius: 8px;
+  border-radius: 16px;
   background: #FFFFFF;
 }
 
@@ -216,6 +217,22 @@
   .portfolio-filter {
     justify-self: start;
     justify-content: flex-start;
+  }
+
+  .portfolio-filter {
+    flex-wrap: nowrap;
+    width: calc(100vw - 32px);
+    overflow-x: auto;
+    padding-bottom: 0.25rem;
+    scrollbar-width: none;
+  }
+
+  .portfolio-filter::-webkit-scrollbar {
+    display: none;
+  }
+
+  .portfolio-filter .control-button {
+    flex: 0 0 auto;
   }
 
   .preview-image-wrap {

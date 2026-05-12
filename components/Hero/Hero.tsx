@@ -1,12 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import { ArrowDown, Menu, MousePointer2 } from "lucide-react";
+import { ArrowDown, Menu, MousePointer2, X } from "lucide-react";
 import {
   motion,
   useReducedMotion
 } from "framer-motion";
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import MagneticButton from "@/components/ui/MagneticButton";
 import "./Hero.css";
 
@@ -26,6 +26,7 @@ const navItems = [
 
 export default function Hero() {
   const reduceMotion = useReducedMotion();
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <section className="hero paper-noise" id="top">
@@ -50,13 +51,35 @@ export default function Hero() {
           ))}
         </nav>
         <div className="header-actions">
-          <button className="icon-button mobile-menu" type="button" aria-label="Open navigation">
-            <Menu size={18} aria-hidden="true" />
+          <button
+            className="icon-button mobile-menu"
+            type="button"
+            aria-label={menuOpen ? "Close navigation" : "Open navigation"}
+            aria-expanded={menuOpen}
+            aria-controls="mobile-navigation"
+            onClick={() => setMenuOpen((current) => !current)}
+          >
+            {menuOpen ? <X size={18} aria-hidden="true" /> : <Menu size={18} aria-hidden="true" />}
           </button>
           <MagneticButton href="#quote" variant="accent">
             Start a quote
           </MagneticButton>
         </div>
+        <nav
+          className="mobile-nav"
+          id="mobile-navigation"
+          data-open={menuOpen}
+          aria-label="Mobile navigation"
+        >
+          {navItems.map((item) => (
+            <a href={item.href} key={item.href} onClick={() => setMenuOpen(false)}>
+              {item.label}
+            </a>
+          ))}
+          <a className="mobile-nav-quote" href="#quote" onClick={() => setMenuOpen(false)}>
+            Start a quote
+          </a>
+        </nav>
       </header>
 
       <div className="hero-grid section-shell">

@@ -1,27 +1,17 @@
 import {
   BadgeCheck,
   BookOpen,
-  BriefcaseBusiness,
-  Building2,
   Boxes,
   Brush,
   Clock3,
   CreditCard,
   FileStack,
-  GraduationCap,
   Handshake,
-  HeartPulse,
-  Hotel,
-  Landmark,
-  Layers3,
   Megaphone,
   Palette,
   Printer,
-  ReceiptText,
-  ScanLine,
   ShieldCheck,
   Sparkles,
-  Store,
   Truck,
   WandSparkles
 } from "lucide-react";
@@ -281,15 +271,6 @@ export const testimonials = [
     name: "Elena Rossi",
     role: "Founder, Lumen Studio"
   }
-];
-
-export const industries = [
-  { title: "Retail and Showrooms", Icon: Store },
-  { title: "Real Estate", Icon: Building2 },
-  { title: "Healthcare", Icon: HeartPulse },
-  { title: "Hospitality", Icon: Hotel },
-  { title: "Education", Icon: GraduationCap },
-  { title: "Finance and Corporate", Icon: Landmark }
 ];
 
 export const footerLinks = [

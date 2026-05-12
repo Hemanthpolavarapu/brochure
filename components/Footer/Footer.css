@@ -1,6 +1,6 @@
 .site-footer {
   overflow: hidden;
-  padding: 0 0 2rem;
+  padding: 0 0 1.6rem;
   background: #FFFFFF;
   color: #606060;
 }
@@ -11,7 +11,7 @@
   width: max-content;
   padding: 1rem 0;
   color: #808080;
-  font-size: clamp(4rem, 13vw, 11rem);
+  font-size: clamp(3.4rem, 10vw, 8rem);
   font-weight: 900;
   line-height: 0.8;
   text-transform: uppercase;
@@ -23,7 +23,7 @@
   grid-template-columns: 1fr auto minmax(220px, auto);
   gap: 1.5rem;
   align-items: start;
-  padding-top: 1.5rem;
+  padding-top: 1.25rem;
   border-top: 1px solid #E6E6E6;
   background: #FFFFFF;
 }

@@ -1,24 +1,24 @@
 .why-section {
   position: relative;
-  padding: clamp(5rem, 10vw, 8rem) 0;
+  padding: clamp(3.5rem, 7vw, 6rem) 0;
   background: #FFFFFF;
 }
 
 .why-grid {
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
-  gap: clamp(1.5rem, 5vw, 4rem);
+  gap: clamp(1.35rem, 4vw, 3rem);
   align-items: start;
 }
 
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.9rem;
+  gap: clamp(0.75rem, 1.8vw, 1rem);
 }
 
 .stat-card {
-  padding: 1.5rem;
+  padding: clamp(1rem, 2vw, 1.35rem);
   background: #FFFFFF;
 }
 
@@ -38,8 +38,8 @@
 .trust-card-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.9rem;
-  margin-top: clamp(2.2rem, 5vw, 4rem);
+  gap: clamp(0.75rem, 1.8vw, 1rem);
+  margin-top: clamp(1.8rem, 4vw, 3rem);
 }
 
 .trust-card {
@@ -47,7 +47,7 @@
   grid-template-columns: auto minmax(0, 1fr);
   align-items: center;
   gap: 0.95rem;
-  padding: 1.5rem;
+  padding: clamp(1rem, 2vw, 1.35rem);
   background: #FFFFFF;
   transition:
     transform 200ms var(--ease-out),
@@ -67,7 +67,7 @@
   height: 3.2rem;
   place-items: center;
   border: 1px solid #DADADA;
-  border-radius: 6px;
+  border-radius: 12px;
   background: #FFFFFF;
   color: #606060;
   flex-shrink: 0;

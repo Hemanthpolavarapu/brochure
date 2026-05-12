@@ -2,7 +2,6 @@
 
 import { Mail, Phone, Send } from "lucide-react";
 import { FormEvent, useState } from "react";
-import MagneticButton from "@/components/ui/MagneticButton";
 import "./CTA.css";
 
 export default function CTA() {
@@ -16,35 +15,31 @@ export default function CTA() {
     message: ""
   });
 
-  function handleInputChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+  function handleInputChange(event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
+    const { name, value } = event.target;
+    setFormData((current) => ({ ...current, [name]: value }));
   }
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setError("");
 
-    // Validate form
     if (!formData.name || !formData.email || !formData.message) {
       setError("Please fill in all required fields.");
       return;
     }
 
-    // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(formData.email)) {
       setError("Please enter a valid email address.");
       return;
     }
 
-    // Phone validation (basic)
     if (formData.phone && !/^\d{10,}$/.test(formData.phone.replace(/\D/g, ""))) {
       setError("Please enter a valid phone number.");
       return;
     }
 
-    // Prepare email content
     const emailBody = `
 Name: ${formData.name}
 Company: ${formData.company || "Not provided"}
@@ -55,15 +50,11 @@ Message:
 ${formData.message}
     `.trim();
 
-    // Try to send via mailto
     const mailtoLink = `mailto:hello@brochear.com?subject=Quote%20Request%20from%20${encodeURIComponent(formData.name)}&body=${encodeURIComponent(emailBody)}`;
     window.location.href = mailtoLink;
 
-    // Show success message
     setSent(true);
     setFormData({ name: "", company: "", phone: "", email: "", message: "" });
-
-    // Reset success message after 5 seconds
     setTimeout(() => setSent(false), 5000);
   }
 
@@ -78,6 +69,7 @@ ${formData.message}
             paper, finish, quantity, and delivery plan for a result your business can trust.
           </p>
         </div>
+
         <form className="quote-form" onSubmit={handleSubmit}>
           <div className="form-row">
             <div className="form-group">
@@ -144,10 +136,10 @@ ${formData.message}
             />
           </div>
 
-          {error && <p className="form-error">{error}</p>}
+          {error ? <p className="form-error">{error}</p> : null}
 
           <div className="form-actions">
-            <button className="icon-button" type="submit" aria-label="Send quote request">
+            <button type="submit" aria-label="Send quote request">
               <Send size={18} aria-hidden="true" />
               <span>Send Request</span>
             </button>
@@ -155,20 +147,20 @@ ${formData.message}
               <span className="or-divider">or contact us directly</span>
               <a href="mailto:hello@brochear.com" className="contact-link">
                 <Mail size={16} aria-hidden="true" />
-                hello@brochear.com
+                <span>hello@brochear.com</span>
               </a>
               <a href="tel:+15550184" className="contact-link">
                 <Phone size={16} aria-hidden="true" />
-                +1 555 0184
+                <span>+1 555 0184</span>
               </a>
             </div>
           </div>
 
-          {sent && (
+          {sent ? (
             <p className="form-state success">
-              ✓ Quote request received. Brochear will reply with a clear print plan.
+              Quote request received. Brochear will reply with a clear print plan.
             </p>
-          )}
+          ) : null}
         </form>
       </div>
     </section>

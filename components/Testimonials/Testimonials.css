@@ -1,18 +1,18 @@
 .testimonial-section {
-  padding: clamp(5rem, 9vw, 8rem) 0;
+  padding: clamp(3.5rem, 7vw, 6rem) 0;
   background: #FFFFFF;
 }
 
 .testimonial-grid {
   display: grid;
   grid-template-columns: minmax(0, 0.95fr) minmax(320px, 1.05fr);
-  gap: clamp(1.5rem, 5vw, 4rem);
+  gap: clamp(1.25rem, 4vw, 3rem);
   align-items: end;
 }
 
 .testimonial-panel {
   position: relative;
-  min-height: 430px;
+  min-height: 360px;
   padding: clamp(1rem, 3vw, 1.5rem);
   background: #FFFFFF;
 }
@@ -23,7 +23,7 @@
 
 .testimonial-panel figure {
   display: grid;
-  min-height: 285px;
+  min-height: 230px;
   align-content: center;
   margin: 0;
 }
@@ -31,7 +31,7 @@
 .testimonial-panel blockquote {
   margin: 0;
   color: #606060;
-  font-size: clamp(1.6rem, 3.6vw, 3.25rem);
+  font-size: clamp(1.35rem, 3vw, 2.65rem);
   font-weight: 820;
   line-height: 1.02;
 }
@@ -79,5 +79,10 @@
 @media (max-width: 820px) {
   .testimonial-grid {
     grid-template-columns: 1fr;
+  }
+
+  .testimonial-panel,
+  .testimonial-panel figure {
+    min-height: auto;
   }
 }

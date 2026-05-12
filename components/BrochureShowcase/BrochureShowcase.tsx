@@ -26,7 +26,6 @@ function ShowcaseCard({ item, onOpen }: { item: Brochure; onOpen: (item: Brochur
       <BrochureMockup fold={item.id} finish={item.finish} />
       <div className="showcase-card-copy">
         <h3>{item.name}</h3>
-        <p>{item.tagline}</p>
       </div>
       <div className="spec-drawer" aria-hidden="true">
         <span>{item.paper}</span>

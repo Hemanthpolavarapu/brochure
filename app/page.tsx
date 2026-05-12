@@ -3,7 +3,6 @@ import Configurator from "@/components/Configurator/Configurator";
 import CTA from "@/components/CTA/CTA";
 import Footer from "@/components/Footer/Footer";
 import Hero from "@/components/Hero/Hero";
-import Industries from "@/components/Industries/Industries";
 import Portfolio from "@/components/Portfolio/Portfolio";
 import SmoothScroll from "@/components/SmoothScroll";
 import Testimonials from "@/components/Testimonials/Testimonials";
@@ -64,7 +63,6 @@ export default function Home() {
         <Configurator />
         <WhyUs />
         <Portfolio />
-        <Industries />
         <Testimonials />
         <CTA />
       </main>
