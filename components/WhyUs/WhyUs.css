@@ -106,4 +106,13 @@
   .trust-card-grid {
     grid-template-columns: 1fr;
   }
+
+  .stat-card,
+  .trust-card {
+    padding: 1rem;
+  }
+
+  .stat-card span {
+    font-size: clamp(2.35rem, 13vw, 3.25rem);
+  }
 }

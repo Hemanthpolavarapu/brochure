@@ -236,7 +236,7 @@
   }
 
   .preview-image-wrap {
-    min-height: 460px;
+    min-height: min(460px, 68vh);
   }
 }
 
@@ -254,6 +254,13 @@
   .portfolio-short,
   .portfolio-medium,
   .portfolio-tall {
-    height: 380px;
+    height: clamp(320px, 92vw, 390px);
+  }
+
+  .portfolio-overlay {
+    right: 0.6rem;
+    bottom: 0.6rem;
+    left: 0.6rem;
+    padding: 0.72rem;
   }
 }

@@ -15,8 +15,8 @@ export const brochureTypes = [
     paper: "250-350gsm coated and matte stocks",
     finish: "Soft-touch, UV, foil, lamination",
     price: "Quote by run",
-    image: "/visuals/print-photo/service-marketing-print.jpg",
-    imageAlt: "Real marketing flyers and printed brochures on a desk with visible paper texture",
+    image: "/visuals/user/img4.jpeg",
+    imageAlt: "Corporate stationery and marketing print materials arranged in a branded flat lay",
     specs: ["Bi-fold", "Tri-fold", "Z-fold", "Gate-fold"],
     leadTime: "3-7 business days"
   },
@@ -35,14 +35,14 @@ export const brochureTypes = [
   },
   {
     id: "z-fold",
-    name: "Corporate Print Kits",
+    name: "Corporate Gifts",
     tagline: "Business cards, folders, letterheads, profiles, and sales collateral aligned as one brand system.",
     fold: "Brand essentials",
     paper: "Premium card and writing stocks",
     finish: "Embossing, spot UV, foil, matte",
     price: "Quote by kit",
-    image: "/visuals/print-photo/service-brand-essentials.jpg",
-    imageAlt: "Premium stationery with envelopes and branded paper materials arranged on a wooden desk",
+    image: "/visuals/user/corporate-gifts.jpg",
+    imageAlt: "Premium corporate gift hamper arranged in a presentation box",
     specs: ["Cards", "Folders", "Profiles", "Stationery"],
     leadTime: "4-8 business days"
   },
@@ -74,8 +74,8 @@ export const serviceCards = [
   },
   {
     title: "Marketing Print",
-    image: "/visuals/print-photo/thumb-flyer-stack.jpg",
-    imageAlt: "Stack of real printed flyers with paper grain"
+    image: "/visuals/user/img4.jpeg",
+    imageAlt: "Corporate stationery and marketing materials arranged in a branded flat lay"
   },
   {
     title: "Multi-Page Print",
@@ -84,8 +84,8 @@ export const serviceCards = [
   },
   {
     title: "Brand Essentials",
-    image: "/visuals/print-photo/thumb-menu-edge.jpg",
-    imageAlt: "Rolled poster and printed paper edge detail"
+    image: "/visuals/user/corporate-gifts.jpg",
+    imageAlt: "Corporate gift hamper with certificate and branded packaging"
   },
   {
     title: "Production",
@@ -193,7 +193,7 @@ export const portfolioItems = [
     title: "Luxury Property Brochure",
     category: "Brochures",
     finish: "Velvet matte stock, foil detail, precision folds",
-    image: "/visuals/print-photo/portfolio-brochures-table.jpg",
+    image: "/visuals/user/img6.jpeg",
     height: "tall"
   },
   {
@@ -209,7 +209,7 @@ export const portfolioItems = [
     title: "Gallery Event Poster",
     category: "Posters",
     finish: "Large-format matte print, gallery-grade contrast",
-    image: "/visuals/print-photo/portfolio-rolled-posters.jpg",
+    image: "/visuals/user/img3.jpeg",
     height: "short"
   },
   {
@@ -233,7 +233,7 @@ export const portfolioItems = [
     title: "Restaurant Menu Print",
     category: "Menus",
     finish: "Durable laminated inserts with premium touch",
-    image: "/visuals/print-photo/portfolio-printed-photos.jpg",
+    image: "/visuals/user/img9.jpeg",
     height: "short"
   },
   {
@@ -241,7 +241,7 @@ export const portfolioItems = [
     title: "Institutional Welcome Pack",
     category: "Corporate",
     finish: "Folders, inserts, letterheads, and guides",
-    image: "/visuals/print-photo/portfolio-business-cards.jpg",
+    image: "/visuals/user/img5.jpeg",
     height: "medium"
   },
   {

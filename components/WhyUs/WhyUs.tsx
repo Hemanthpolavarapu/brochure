@@ -1,35 +1,76 @@
 "use client";
 
-import { animate, motion, useInView, useMotionValue, useTransform } from "framer-motion";
 import Image from "next/image";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Reveal from "@/components/ui/Reveal";
 import { trustCards, trustStats } from "@/lib/data";
 import "./WhyUs.css";
 
 function Counter({ value, suffix }: { value: number; suffix: string }) {
   const ref = useRef<HTMLSpanElement | null>(null);
-  const inView = useInView(ref, { once: true, margin: "-80px" });
-  const count = useMotionValue(0);
-  const rounded = useTransform(count, (latest) => {
-    const next = Math.round(latest);
-    return `${next.toLocaleString()}${suffix}`;
-  });
+  const [count, setCount] = useState(0);
 
   useEffect(() => {
-    if (!inView) {
+    const node = ref.current;
+
+    if (!node) {
       return;
     }
 
-    const controls = animate(count, value, {
-      duration: 1.4,
-      ease: [0.22, 1, 0.36, 1]
-    });
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    let frame = 0;
+    let started = false;
 
-    return controls.stop;
-  }, [count, inView, value]);
+    const runCounter = () => {
+      if (started) {
+        return;
+      }
 
-  return <motion.span ref={ref}>{rounded}</motion.span>;
+      started = true;
+
+      if (reduceMotion) {
+        setCount(value);
+        return;
+      }
+
+      const duration = 1400;
+      const start = performance.now();
+
+      const tick = (time: number) => {
+        const progress = Math.min((time - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        setCount(Math.round(value * eased));
+
+        if (progress < 1) {
+          frame = requestAnimationFrame(tick);
+        }
+      };
+
+      frame = requestAnimationFrame(tick);
+    };
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          runCounter();
+          observer.disconnect();
+        }
+      },
+      {
+        rootMargin: "0px 0px -8% 0px",
+        threshold: 0.12
+      }
+    );
+
+    observer.observe(node);
+
+    return () => {
+      observer.disconnect();
+      cancelAnimationFrame(frame);
+    };
+  }, [value]);
+
+  return <span ref={ref}>{`${count.toLocaleString()}${suffix}`}</span>;
 }
 
 export default function WhyUs() {

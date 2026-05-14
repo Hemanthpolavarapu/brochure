@@ -37,8 +37,8 @@ export default function Footer() {
           ))}
         </nav>
         <address>
-          <a href="mailto:hello@brochear.com">hello@brochear.com</a>
-          <a href="tel:+15550184">+1 555 0184</a>
+          <a href="https://api.whatsapp.com/send?phone=919951499488" target="_blank" rel="noreferrer">WhatsApp 9951499488</a>
+          <a href="tel:9951499488">Call 9951499488</a>
           <span>Commercial printing studio</span>
         </address>
       </div>

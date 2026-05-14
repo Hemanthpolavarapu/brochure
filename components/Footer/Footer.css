@@ -59,5 +59,17 @@
 @media (max-width: 760px) {
   .footer-grid {
     grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .site-footer nav,
+  .site-footer address {
+    gap: 0.7rem;
+  }
+
+  .site-footer a {
+    min-height: 2.4rem;
+    display: inline-flex;
+    align-items: center;
   }
 }

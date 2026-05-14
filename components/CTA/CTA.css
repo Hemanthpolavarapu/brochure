@@ -133,6 +133,12 @@
   box-shadow: 0 12px 26px rgba(96, 96, 96, 0.16);
 }
 
+.form-actions button:disabled {
+  cursor: wait;
+  opacity: 0.78;
+  transform: none;
+}
+
 .form-actions button:active {
   transform: scale(0.98);
 }
@@ -210,11 +216,20 @@
     border-radius: 16px;
   }
 
+  .cta-copy h2 {
+    font-size: clamp(2rem, 11vw, 3.1rem);
+  }
+
   .form-row {
     grid-template-columns: 1fr;
   }
 
   .quote-form {
     padding: 0.9rem;
+  }
+
+  .form-actions button,
+  .contact-link {
+    min-height: 3.1rem;
   }
 }

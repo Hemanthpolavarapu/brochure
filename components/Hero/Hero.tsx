@@ -6,7 +6,7 @@ import {
   motion,
   useReducedMotion
 } from "framer-motion";
-import { Fragment, useState } from "react";
+import { Fragment, MouseEvent, useEffect, useState } from "react";
 import MagneticButton from "@/components/ui/MagneticButton";
 import "./Hero.css";
 
@@ -27,6 +27,47 @@ const navItems = [
 export default function Hero() {
   const reduceMotion = useReducedMotion();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("top");
+
+  useEffect(() => {
+    const sectionIds = ["top", ...navItems.map((item) => item.href.slice(1))];
+    const sections = sectionIds
+      .map((id) => document.getElementById(id))
+      .filter((section): section is HTMLElement => Boolean(section));
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+        if (visible?.target.id) {
+          setActiveSection(visible.target.id);
+        }
+      },
+      {
+        rootMargin: "-22% 0px -58% 0px",
+        threshold: [0.08, 0.22, 0.45]
+      }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
+    return () => observer.disconnect();
+  }, []);
+
+  function handleNavClick(event: MouseEvent<HTMLAnchorElement>, href: string) {
+    const target = document.querySelector<HTMLElement>(href);
+
+    if (!target) {
+      return;
+    }
+
+    event.preventDefault();
+    setMenuOpen(false);
+    target.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
+    window.history.pushState(null, "", href);
+  }
 
   return (
     <section className="hero paper-noise" id="top">
@@ -45,7 +86,12 @@ export default function Hero() {
         </a>
         <nav className="desktop-nav" aria-label="Primary navigation">
           {navItems.map((item) => (
-            <a href={item.href} key={item.href}>
+            <a
+              href={item.href}
+              key={item.href}
+              data-active={activeSection === item.href.slice(1)}
+              onClick={(event) => handleNavClick(event, item.href)}
+            >
               {item.label}
             </a>
           ))}
@@ -72,11 +118,21 @@ export default function Hero() {
           aria-label="Mobile navigation"
         >
           {navItems.map((item) => (
-            <a href={item.href} key={item.href} onClick={() => setMenuOpen(false)}>
+            <a
+              href={item.href}
+              key={item.href}
+              data-active={activeSection === item.href.slice(1)}
+              onClick={(event) => handleNavClick(event, item.href)}
+            >
               {item.label}
             </a>
           ))}
-          <a className="mobile-nav-quote" href="#quote" onClick={() => setMenuOpen(false)}>
+          <a
+            className="mobile-nav-quote"
+            href="#quote"
+            data-active={activeSection === "quote"}
+            onClick={(event) => handleNavClick(event, "#quote")}
+          >
             Start a quote
           </a>
         </nav>

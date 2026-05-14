@@ -123,6 +123,12 @@
   }
 
   .config-preview {
-    min-height: 410px;
+    min-height: 360px;
+    padding: 1rem;
+  }
+
+  .about-points span,
+  .segmented-control .control-button {
+    width: 100%;
   }
 }

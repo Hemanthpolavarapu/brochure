@@ -17,7 +17,7 @@ const schema = [
     logo: "https://brochure-atelier.example/logo.png",
     contactPoint: {
       "@type": "ContactPoint",
-      telephone: "+1-555-0184",
+      telephone: "+91-9951499488",
       contactType: "sales",
       areaServed: "International",
       availableLanguage: ["English"]

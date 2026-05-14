@@ -1,12 +1,17 @@
 "use client";
 
-import { Mail, Phone, Send } from "lucide-react";
+import { MessageCircle, Phone, Send } from "lucide-react";
 import { FormEvent, useState } from "react";
 import "./CTA.css";
+
+const whatsappNumber = "919951499488";
+const callNumber = "9951499488";
+const whatsappBaseUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}`;
 
 export default function CTA() {
   const [sent, setSent] = useState(false);
   const [error, setError] = useState("");
+  const [sending, setSending] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     company: "",
@@ -23,39 +28,51 @@ export default function CTA() {
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setError("");
+    setSending(false);
 
-    if (!formData.name || !formData.email || !formData.message) {
+    if (!formData.name || !formData.phone || !formData.message) {
       setError("Please fill in all required fields.");
       return;
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(formData.email)) {
+    if (formData.email && !emailRegex.test(formData.email)) {
       setError("Please enter a valid email address.");
       return;
     }
 
-    if (formData.phone && !/^\d{10,}$/.test(formData.phone.replace(/\D/g, ""))) {
+    if (!/^\d{10,}$/.test(formData.phone.replace(/\D/g, ""))) {
       setError("Please enter a valid phone number.");
       return;
     }
 
-    const emailBody = `
+    const whatsappMessage = `Hello Aureleaf Organics,
+
+New Quote Request:
+
 Name: ${formData.name}
 Company: ${formData.company || "Not provided"}
-Phone: ${formData.phone || "Not provided"}
-Email: ${formData.email}
+Phone: ${formData.phone}
+Email: ${formData.email || "Not provided"}
+Requirement: ${formData.message}
 
-Message:
-${formData.message}
+Please contact the customer.
     `.trim();
 
-    const mailtoLink = `mailto:hello@brochear.com?subject=Quote%20Request%20from%20${encodeURIComponent(formData.name)}&body=${encodeURIComponent(emailBody)}`;
-    window.location.href = mailtoLink;
+    const whatsappUrl = `${whatsappBaseUrl}&text=${encodeURIComponent(whatsappMessage)}`;
+    setSending(true);
+    const whatsappWindow = window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+
+    if (!whatsappWindow) {
+      window.location.href = whatsappUrl;
+    }
 
     setSent(true);
     setFormData({ name: "", company: "", phone: "", email: "", message: "" });
-    setTimeout(() => setSent(false), 5000);
+    setTimeout(() => {
+      setSent(false);
+      setSending(false);
+    }, 5000);
   }
 
   return (
@@ -95,25 +112,25 @@ ${formData.message}
 
           <div className="form-row">
             <div className="form-group">
-              <label htmlFor="email">Email Address *</label>
+              <label htmlFor="phone">Phone Number *</label>
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                placeholder="Your phone number"
+                required
+                value={formData.phone}
+                onChange={handleInputChange}
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="email">Email Address</label>
               <input
                 id="email"
                 name="email"
                 type="email"
                 placeholder="you@company.com"
-                required
                 value={formData.email}
-                onChange={handleInputChange}
-              />
-            </div>
-            <div className="form-group">
-              <label htmlFor="phone">Phone Number</label>
-              <input
-                id="phone"
-                name="phone"
-                type="tel"
-                placeholder="+1 (555) 000-0000"
-                value={formData.phone}
                 onChange={handleInputChange}
               />
             </div>
@@ -135,26 +152,31 @@ ${formData.message}
           {error ? <p className="form-error">{error}</p> : null}
 
           <div className="form-actions">
-            <button type="submit" aria-label="Send quote request">
+            <button type="submit" aria-label="Send quote request on WhatsApp" disabled={sending}>
               <Send size={18} aria-hidden="true" />
-              <span>Send Request</span>
+              <span>{sending ? "Opening WhatsApp..." : "Send Request"}</span>
             </button>
             <div className="contact-options">
               <span className="or-divider">or contact us directly</span>
-              <a href="mailto:hello@brochear.com" className="contact-link">
-                <Mail size={16} aria-hidden="true" />
-                <span>hello@brochear.com</span>
+              <a
+                href={whatsappBaseUrl}
+                className="contact-link"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <MessageCircle size={16} aria-hidden="true" />
+                <span>WhatsApp 9951499488</span>
               </a>
-              <a href="tel:+15550184" className="contact-link">
+              <a href={`tel:${callNumber}`} className="contact-link">
                 <Phone size={16} aria-hidden="true" />
-                <span>+1 555 0184</span>
+                <span>Call 9951499488</span>
               </a>
             </div>
           </div>
 
           {sent ? (
             <p className="form-state success">
-              Quote request received. Brochear will reply with a clear print plan.
+              WhatsApp is opening with your quote request.
             </p>
           ) : null}
         </form>
